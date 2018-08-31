@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <ui:composition template="/template.xhtml">
+        <ui:define name="content">
+            <br/>
+            <div class="messageTitle">Controlled Natural Language Interface for querying the <i>CLAVIUS</i> resource - DEMO VERSION</div>
+            <div class="linkTitle">(Click the lens icon on the upper toolbar)</div>
+            <br/>
+            <div class="message">
+                <ul>
+                    <li><b>The Resource</b></li>
+                    <ul><li>A diachronic termino-ontological resource, named <i>CLAVIUS</i>, representing the evolution of astronomical 
+                            concepts and theories from antiquity until the dawn of the modern age. </li>
+                        <li><i>CLAVIUS</i> is being built within the Project <a href="http://claviusontheweb.it/">Clavius on the Web</a> and got its name from Cristophorus Clavius, 
+                            a German Jesuit mathematician and astronomer, who was one of the most respected and influential scholars of his time.</li>
+                        <li>At the moment the resource is composed of 24 concepts and 82 terms.</li>
+                        <li>The resource is still being populated.</li>
+                    </ul><br />
+                    <li><b>The System (Click the lens icon on the upper toolbar)</b>  </li>
+                    <ul><li>In order to make <i>CLAVIUS</i> accessible, a first preliminary version of a controlled natural language interface has been developed for querying the ontology.</li>
+                        <li>Researches could be performed by taking into account the lexical level, the ontological level or both.</li>
+                        <li>Queries templates were created in order to perform different types of interrogations, 
+                            using some menus inside each template.</li>
+                        <li>Each template is made of a 
+                            fixed part that typify a specific querying model and a variable part that allows the user to
+                            chose a certain element of the ontology from the drop-down list.</li>
+                        <li>Question templates are 
+                            processed by the software into SPARQL queries aimed at interrogating the ontology, 
+                            providing the user with the desired answers.</li>
+                        <li>The provided answers take into account the diachronic evolution of concepts and properties.</li>
+                        <li>Answers are be given both in a tabular form and by means of a timeline.</li>
+                    </ul>
+                </ul><br/>
+            </div>
+            <div class="footerMessage">Developed by <a href="http://licolab.ilc.cnr.it">Literay Computing Lab</a> &copy; 2016 - Insitute for Computational Linguistics "A. Zampolli", CNR Pisa</div>
+            <br/>
+            <br/> 
+        </ui:define>
+    </ui:composition>
+
+</html>

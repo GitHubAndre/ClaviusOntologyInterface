@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:pe="http://primefaces.org/ui/extensions" 
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="content">
+            <p:scrollPanel id="basic" style="height:480px" mode="native">
+                
+                <br />
+
+                <h:form styleClass="colHeader" id="Domanda_1">
+                    <p:fieldset styleClass="ui-fieldset-legend"
+                                legend="Question about terms relations"
+                                toggleable="true" toggleSpeed="500" collapsed="true">
+                        <br />
+                        <br />
+                        What are the relations of the term
+                        <p:selectOneMenu styleClass="menu" value="#{ontologyQuestions.query_1_param_1}" id="q1_p1" filter="true" filterMatchMode="startsWith" effect="fade">
+                            <f:selectItems value="#{ontologyQuestions.instances_q1_p1}" var="c"
+                                           itemLabel="#{ontologyQuestions.getLowercased(c)}" itemValue="#{c}" />
+                        </p:selectOneMenu> ? 
+                        <p:commandButton value="Ask" icon="ui-icon-search"
+                                         update=":risposte" onstart="blockUI.show()"
+                                         oncomplete="blockUI.hide()"
+                                         actionListener="#{ontologyQuestions.runQuestion_1()}"
+                                         styleClass="toolButtonRight">
+                        </p:commandButton>
+                        <br />
+                        <br />
+                        <br />
+                        <h:outputText value="Example: What are the relations of the term 'nona_sphaera' ?" 
+                                      style="font-style: italic; color:gray"/>
+                        <br />
+                        <br />
+                    </p:fieldset>
+                </h:form>
+
+
+                <br />
+
+                <h:form styleClass="colHeader" id="Domanda_2">
+                    <p:fieldset styleClass="ui-fieldset-legend"
+                                legend="Question about relations, concepts and terms"
+                                toggleable="true" toggleSpeed="500" collapsed="true">
+                        <br />
+                        <br />
+                        What are the relations of the concept denoted by the term
+                        <p:selectOneMenu styleClass="menu" value="#{ontologyQuestions.query_2_param_1}" id="q2_p1" filter="true" filterMatchMode="startsWith" effect="fade">
+                            <f:selectItems value="#{ontologyQuestions.instances_q2_p1}" var="c"
+                                           itemLabel="#{ontologyQuestions.getLowercased(c)}" itemValue="#{c}" />
+                        </p:selectOneMenu> ? 
+                        <p:commandButton value="Ask" icon="ui-icon-search"
+                                         update=":risposte" onstart="blockUI.show()"
+                                         oncomplete="blockUI.hide()"
+                                         actionListener="#{ontologyQuestions.runQuestion_2()}"
+                                         styleClass="toolButtonRight">
+                        </p:commandButton>
+                        <br />
+                        <br />
+                        <br />
+                        <h:outputText value="Example: What are the relations of the concept denoted by the term 'firmamentum' ?" 
+                                      style="font-style: italic; color:gray"/>
+                        <br />
+                        <br />
+                    </p:fieldset>
+                </h:form>
+
+                <br />
+
+                <h:form styleClass="colHeader" id="Domanda_3">
+                    <p:fieldset styleClass="ui-fieldset-legend"
+                                legend="Question about relations and concepts"
+                                toggleable="true" toggleSpeed="500" collapsed="true">
+                        <br />
+                        <br />
+                        What are the relations of the concept
+                        <p:selectOneMenu styleClass="menu" value="#{ontologyQuestions.query_3_param_1}" id="q3_p1" filter="true" filterMatchMode="startsWith" effect="fade">
+                            <f:selectItems value="#{ontologyQuestions.instances_q3_p1}" var="c"
+                                           itemLabel="#{ontologyQuestions.getLowercased(c)}" itemValue="#{c}" />
+                        </p:selectOneMenu> ? 
+                        <p:commandButton value="Ask" icon="ui-icon-search"
+                                         update=":risposte" onstart="blockUI.show()"
+                                         oncomplete="blockUI.hide()"
+                                         actionListener="#{ontologyQuestions.runQuestion_3()}"
+                                         styleClass="toolButtonRight">
+                        </p:commandButton>
+                        <br />
+                        <br />
+                        <br />
+                        <h:outputText value="Example: What are the relations of the concept 'precession_of_the_equinox' ?" 
+                                      style="font-style: italic; color:gray"/>
+                        <br />
+                        <br />
+                    </p:fieldset>
+                </h:form>
+                <br />
+
+                <h:form styleClass="colHeader" id="Domanda_4">
+                    <p:fieldset styleClass="ui-fieldset-legend"
+                                legend="Question about lexical and semantic relations over time"
+                                toggleable="true" toggleSpeed="500" collapsed="true">
+                        <br />
+                        <br />
+                        What  
+                        <p:selectOneMenu styleClass="menu" value="#{ontologyQuestions.query_4_param_1}" id="q4_p1" effect="fade" 
+                                         valueChangeListener="#{ontologyQuestions.query_4_relTypeChanged}">
+                            <p:ajax listener="#{ontologyQuestions.q_4_p_1Changed}" update="q4_p2,q4_p3" />
+                            <f:selectItem itemLabel="semantic" itemValue="semantic" />
+                            <f:selectItem itemLabel="lexical" itemValue="lexical" />
+                        </p:selectOneMenu> relations hold between 
+                        <p:selectOneMenu styleClass="menu" value="#{ontologyQuestions.query_4_param_2}" id="q4_p2" filter="true" filterMatchMode="startsWith" effect="fade">
+                            <f:selectItems value="#{ontologyQuestions.instances_q4_p2}" var="c"
+                                           itemLabel="#{ontologyQuestions.getLowercased(c)}" itemValue="#{c}" />
+                        </p:selectOneMenu> and
+                        <p:selectOneMenu styleClass="menu" value="#{ontologyQuestions.query_4_param_3}" id="q4_p3" filter="true" filterMatchMode="startsWith" effect="fade">
+                            <f:selectItems value="#{ontologyQuestions.instances_q4_p3}" var="c"
+                                           itemLabel="#{ontologyQuestions.getLowercased(c)}" itemValue="#{c}" />
+                        </p:selectOneMenu>
+                        <p:spacer width="8"/> 
+                        <p:selectOneMenu styleClass="menu" value="#{ontologyQuestions.query_4_param_4}" id="q4_p4" effect="fade" 
+                                         valueChangeListener="#{ontologyQuestions.query_4_relTimeChanged}">
+                            <f:selectItem itemLabel="before" itemValue="before" />
+                            <f:selectItem itemLabel="after" itemValue="after" />
+                            <f:selectItem itemLabel="in" itemValue="in" />
+                        </p:selectOneMenu> the year <h:inputText value="#{ontologyQuestions.query_4_param_5}" />
+                        ?
+                        <p:commandButton value="Ask" icon="ui-icon-search"
+                                         update=":risposte" onstart="blockUI.show()"
+                                         oncomplete="blockUI.hide()"
+                                         actionListener="#{ontologyQuestions.runQuestion_4()}"
+                                         styleClass="toolButtonRight">
+                        </p:commandButton>
+                        <br />
+                        <br />
+                        <br />
+                        <h:outputText value="Example: What semantic relations hold between 'ninth_sphere' and 'celestial_sphere' after the year 1252 ?" 
+                                      style="font-style: italic; color:gray"/>
+                        <br />
+                        <br />
+                    </p:fieldset>
+                </h:form>
+                <br />
+                <br />
+                <br />
+            </p:scrollPanel>
+            <br />
+
+            <center>
+                <h:form id="risposte">
+                    <p:tabView styleClass="tabHeader" id="tabView" rendered="#{ontologyQuestions.results.size() != 0 or ontologyQuestions.currentQuery != 0}">
+                        <p:tab title="Tabular results"
+                               closable="true">
+                            <p:dataTable styleClass="colHeader" var="res"
+                                         value="#{ontologyQuestions.results}" style="width:80%" paginator="true"
+                                         rows="5" rowsPerPageTemplate="5, 10, 50, 100, 500"
+                                         paginatorTemplate=" {CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                                         rendered="#{ontologyQuestions.results.size() != 0}" widgetVar="carsTable">
+                                <p:columns styleClass="colHeader" value="#{ontologyQuestions.columns}"
+                                           var="column" columnIndexVar="colIndex"
+                                           sortBy="#{res[column.property]}">
+                                    <f:facet name="header">  
+                                        #{column.header}  
+                                    </f:facet>    
+                                    #{res[column.property]}  
+                                </p:columns>
+                            </p:dataTable>
+                            <h:outputText value="No results found." rendered ="#{ontologyQuestions.results.size() == 0 and ontologyQuestions.currentQuery != 0}"/>
+                        </p:tab>
+                        <p:tab title="Graphical results"
+                               closable="true">       
+                            <pe:timeline id="timeline" value="#{ontologyTimelineModel.model}" rendered="#{ontologyQuestions.results.size() != 0 and ontologyQuestions.currentQuery != 4}"
+                                         eventMargin="10" eventMarginAxis="0"  
+                                         start="#{ontologyTimelineModel.start}"  
+                                         end="#{ontologyTimelineModel.end}"  
+                                         zoomMin="315360000000000" zoomMax="315360000000000"
+                                         zoomable="true" styleClass="timelineMyStyle"
+                                         max="#{ontologyTimelineModel.max}"  
+                                         min="#{ontologyTimelineModel.min}" 
+                                         showNavigation="false" showButtonNew="false"  
+                                         axisOnTop="false" stackEvents="false"/> 
+                            <h:outputText value="Timeline unavalaible for this kind of question." rendered ="#{ontologyQuestions.currentQuery == 4}"/>
+                        </p:tab>
+                    </p:tabView>
+                </h:form>
+            </center>
+            <br />
+            <br />
+            <h:form>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

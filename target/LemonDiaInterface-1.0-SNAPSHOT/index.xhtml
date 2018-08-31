@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:pe="http://primefaces.org/ui/extensions" 
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="content">
+            <p:growl id="messages" showDetail="true" />
+            <p:layout fullPage="true">
+                <p:layoutUnit styleClass="layoutUnit_banner" position="north" size="60"> 
+                    <p:graphicImage id="lemonDiaHeader" styleClass="banner" name="image/backgroundImage.png" height="60"/>
+                </p:layoutUnit>
+
+                <p:layoutUnit styleClass="layoutUnit" position="south" size="350" header="Semantic Shift" resizable="true">
+                    <h:form id="timelineForm">
+                        <pe:timeline id="timeline" value="#{ontologyTimelineModel.model}" rendered="#{ontologyQuestions.timelineAvailability}"
+                                     eventMargin="10" eventMarginAxis="0"  
+                                     start="#{ontologyTimelineModel.start}"  
+                                     end="#{ontologyTimelineModel.end}"  
+                                     zoomMin="315360000000000" zoomMax="315360000000000"
+                                     zoomable="true" styleClass="timelineMyStyle"
+                                     max="#{ontologyTimelineModel.max}"  
+                                     min="#{ontologyTimelineModel.min}" 
+                                     showNavigation="false" showButtonNew="false"  
+                                     axisOnTop="false" stackEvents="false"
+                                     editable="false"/> 
+                    </h:form>
+                </p:layoutUnit>
+
+                <p:layoutUnit styleClass="layoutUnit" style = "min-width:300px;" position="west" size="200" header="Lexicon Info" resizable="true">
+                    <h:outputText id="fileStatView" escape="false" value="#{ontologyQuestions.csvStat}" />
+                </p:layoutUnit>
+
+                <p:layoutUnit styleClass="layoutUnit" position="center">
+                    <p:layout>
+                        <p:layoutUnit styleClass="layoutUnit" position="center" header="Lexicon Model">
+                            <p:outputPanel>
+                                <h:outputText id="outputArea" escape="false" value="#{ontologyQuestions.lexiconTriples}"/>
+                            </p:outputPanel>    
+                            <h:form id="uploadForm">
+                                <p:fileUpload fileUploadListener="#{ontologyQuestions.handleFileUpload}" mode="advanced" dragDropSupport="false"
+                                              update="uploadForm :timelineForm :outputArea :messages :fileStatView :toolbarForm" sizeLimit="100000000" styleClass="translationToolbarButton"
+                                              fileLimit="1" allowTypes="/(\.|\/)(xlsx)$/" rendered="#{ontologyQuestions.uploadAvailable}"/>                                
+                            </h:form>
+                        </p:layoutUnit>
+                        <p:layoutUnit styleClass="layoutUnit" position="south">
+                            <h:form id="toolbarForm">     
+                                <p:toolbar styleClass="translationToolbar">
+                                    <f:facet name="left">
+                                        <p:commandButton styleClass="translationToolbarButton" update=":uploadForm :timelineForm :outputArea :messages :fileStatView toolbarForm" 
+                                                         action="#{ontologyQuestions.newInit()}" value="New import" icon="ui-icon-document" disabled="#{ontologyQuestions.importAvailability}"/>
+                                        <p:menuButton value="Timeline" styleClass="translationToolbarButton" disabled="#{ontologyQuestions.timelineCreationCompleted} and #{!ontologyQuestions.timelineModificationCompleted}">
+                                            <p:menuitem styleClass="translationToolbarButton" value="Create" icon="ui-icon-plus" disabled="#{ontologyQuestions.timelineCreationCompleted}"
+                                                        action="#{timelineCreationController.timelineCreationAction()}"
+                                                        oncomplete="PF('timelineCreationDialog').show()" update=":timelineCreationForm"/>
+                                            <p:menuitem styleClass="translationToolbarButton" value="Modify" icon="ui-icon-pencil" disabled="#{!ontologyQuestions.timelineModificationCompleted}"
+                                                        action="#{timelineCreationController.timelineModificationAction()}"
+                                                        oncomplete="PF('timelineCreationDialog').show()" update=":timelineCreationForm"/>
+                                        </p:menuButton>
+                                    </f:facet>
+                                    <f:facet name="right"> 
+                                        <p:menuButton value="Export lexicon" styleClass="translationToolbarButton" disabled="#{!ontologyQuestions.exportAvailability}">
+                                            <p:menuitem styleClass="translationToolbarButton" value=" OWL/XML (.owl)" ajax="false" icon="ui-icon-print">
+                                                <p:fileDownload value="#{exportController.OWLXMLexportAction()}" />
+                                            </p:menuitem>
+                                            <p:menuitem styleClass="translationToolbarButton" value=" TURTLE (.ttl)" ajax="false" icon="ui-icon-print">
+                                                <p:fileDownload value="#{exportController.TURTLEexportAction()}" />
+                                            </p:menuitem>
+                                        </p:menuButton>    
+                                        <p:commandButton styleClass="translationToolbarButton" type="button" title="Save" icon="ui-icon-disk" rendered="false"/>
+                                        <p:commandButton styleClass="translationToolbarButton" type="button" title="Delete" icon="ui-icon-trash" rendered="false"/>
+                                        <p:commandButton styleClass="translationToolbarButton" type="button" title="Print" icon="ui-icon-print" rendered="false"/>
+                                    </f:facet>
+                                </p:toolbar>
+                            </h:form>
+                        </p:layoutUnit>
+                    </p:layout>
+                </p:layoutUnit>
+
+            </p:layout>
+
+            <ui:include src="/timelineCreationView.xhtml"/>
+
+        </ui:define>
+    </ui:composition>
+
+</html>

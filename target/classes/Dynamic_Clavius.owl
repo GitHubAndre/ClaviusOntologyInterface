@@ -1,0 +1,2070 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY time "http://www.w3.org/2006/time#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY timeEvents "http://www.intelligence.tuc.gr/2011/timeEvents#" >
+    <!ENTITY untitled-ontology-32 "http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#"
+     xml:base="http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:untitled-ontology-32="http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:timeEvents="http://www.intelligence.tuc.gr/2011/timeEvents#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gDay -->
+
+    <rdfs:Datatype rdf:about="&xsd;gDay"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gMonth -->
+
+    <rdfs:Datatype rdf:about="&xsd;gMonth"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gYear -->
+
+    <rdfs:Datatype rdf:about="&xsd;gYear"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.intelligence.tuc.gr/2011/timeEvents#dataPropertyOP -->
+
+    <owl:ObjectProperty rdf:about="&timeEvents;dataPropertyOP">
+        <rdfs:comment xml:lang="en">Super property of all properties that link an individual to an event instance. The specific event is subject of a data property triple.</rdfs:comment>
+        <rdfs:range rdf:resource="&timeEvents;Event"/>
+        <rdfs:subPropertyOf rdf:resource="&timeEvents;participatesIn"/>
+        <rdfs:domain rdf:resource="&owl;Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.intelligence.tuc.gr/2011/timeEvents#during -->
+
+    <owl:ObjectProperty rdf:about="&timeEvents;during">
+        <rdfs:comment xml:lang="en">An object property that relates an instance of the event class to a time interval individual. This means that the current event took place during the specified time interval.</rdfs:comment>
+        <rdfs:domain rdf:resource="&timeEvents;Event"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+        <rdfs:range rdf:resource="&time;Interval"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.intelligence.tuc.gr/2011/timeEvents#overlaps -->
+
+    <owl:ObjectProperty rdf:about="&timeEvents;overlaps">
+        <rdfs:comment xml:lang="en">An object property that relates two time interval instances that some way overlap each other.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.intelligence.tuc.gr/2011/timeEvents#participatesIn -->
+
+    <owl:ObjectProperty rdf:about="&timeEvents;participatesIn">
+        <rdfs:comment xml:lang="en">Super property of all properties that participate in temporal &quot;triples&quot;. Every property that is converted to temporal becomes subproperty of this object property.</rdfs:comment>
+        <rdfs:range rdf:resource="&owl;Thing"/>
+        <rdfs:domain rdf:resource="&owl;Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Synonym -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-32;Synonym">
+        <rdfs:subPropertyOf rdf:resource="&timeEvents;participatesIn"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&timeEvents;Event"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&timeEvents;Event"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#causes -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-32;causes">
+        <rdfs:subPropertyOf rdf:resource="&timeEvents;participatesIn"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&timeEvents;Event"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&timeEvents;Event"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#denotes -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-32;denotes">
+        <rdfs:subPropertyOf rdf:resource="&timeEvents;participatesIn"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&timeEvents;Event"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&timeEvents;Event"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#isCausedBy -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-32;isCausedBy">
+        <rdfs:subPropertyOf rdf:resource="&timeEvents;participatesIn"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&timeEvents;Event"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&timeEvents;Event"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#isDenotedBy -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-32;isDenotedBy">
+        <rdfs:subPropertyOf rdf:resource="&timeEvents;participatesIn"/>
+        <owl:inverseOf rdf:resource="&untitled-ontology-32;denotes"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&timeEvents;Event"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&timeEvents;Event"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broader -->
+
+    <owl:ObjectProperty rdf:about="&skos;broader">
+        <rdfs:subPropertyOf rdf:resource="&timeEvents;participatesIn"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&timeEvents;Event"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&timeEvents;Event"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#after -->
+
+    <owl:ObjectProperty rdf:about="&time;after">
+        <owl:inverseOf rdf:resource="&time;before"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#before -->
+
+    <owl:ObjectProperty rdf:about="&time;before">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:range rdf:resource="&time;TemporalEntity"/>
+        <rdfs:domain rdf:resource="&time;TemporalEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#dayOfWeek -->
+
+    <owl:ObjectProperty rdf:about="&time;dayOfWeek">
+        <rdfs:domain rdf:resource="&time;DateTimeDescription"/>
+        <rdfs:range rdf:resource="&time;DayOfWeek"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasBeginning -->
+
+    <owl:ObjectProperty rdf:about="&time;hasBeginning">
+        <rdfs:range rdf:resource="&time;Instant"/>
+        <rdfs:domain rdf:resource="&time;TemporalEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasDateTimeDescription -->
+
+    <owl:ObjectProperty rdf:about="&time;hasDateTimeDescription">
+        <rdfs:range rdf:resource="&time;DateTimeDescription"/>
+        <rdfs:domain rdf:resource="&time;DateTimeInterval"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasDurationDescription -->
+
+    <owl:ObjectProperty rdf:about="&time;hasDurationDescription">
+        <rdfs:range rdf:resource="&time;DurationDescription"/>
+        <rdfs:domain rdf:resource="&time;TemporalEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasEnd -->
+
+    <owl:ObjectProperty rdf:about="&time;hasEnd">
+        <rdfs:range rdf:resource="&time;Instant"/>
+        <rdfs:domain rdf:resource="&time;TemporalEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#inDateTime -->
+
+    <owl:ObjectProperty rdf:about="&time;inDateTime">
+        <rdfs:range rdf:resource="&time;DateTimeDescription"/>
+        <rdfs:domain rdf:resource="&time;Instant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#inside -->
+
+    <owl:ObjectProperty rdf:about="&time;inside">
+        <rdfs:range rdf:resource="&time;Instant"/>
+        <rdfs:domain rdf:resource="&time;Interval"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalAfter -->
+
+    <owl:ObjectProperty rdf:about="&time;intervalAfter"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalBefore -->
+
+    <owl:ObjectProperty rdf:about="&time;intervalBefore">
+        <rdfs:range rdf:resource="&time;ProperInterval"/>
+        <rdfs:domain rdf:resource="&time;ProperInterval"/>
+        <rdfs:subPropertyOf rdf:resource="&time;before"/>
+        <owl:inverseOf rdf:resource="&time;intervalAfter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalContains -->
+
+    <owl:ObjectProperty rdf:about="&time;intervalContains">
+        <rdfs:subPropertyOf rdf:resource="&timeEvents;overlaps"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalDuring -->
+
+    <owl:ObjectProperty rdf:about="&time;intervalDuring">
+        <rdfs:subPropertyOf rdf:resource="&timeEvents;overlaps"/>
+        <rdfs:domain rdf:resource="&time;ProperInterval"/>
+        <rdfs:range rdf:resource="&time;ProperInterval"/>
+        <owl:inverseOf rdf:resource="&time;intervalContains"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalEquals -->
+
+    <owl:ObjectProperty rdf:about="&time;intervalEquals">
+        <rdfs:subPropertyOf rdf:resource="&timeEvents;overlaps"/>
+        <rdfs:range rdf:resource="&time;ProperInterval"/>
+        <rdfs:domain rdf:resource="&time;ProperInterval"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalFinishedBy -->
+
+    <owl:ObjectProperty rdf:about="&time;intervalFinishedBy">
+        <rdfs:subPropertyOf rdf:resource="&timeEvents;overlaps"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalFinishes -->
+
+    <owl:ObjectProperty rdf:about="&time;intervalFinishes">
+        <rdfs:subPropertyOf rdf:resource="&timeEvents;overlaps"/>
+        <rdfs:domain rdf:resource="&time;ProperInterval"/>
+        <rdfs:range rdf:resource="&time;ProperInterval"/>
+        <owl:inverseOf rdf:resource="&time;intervalFinishedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalMeets -->
+
+    <owl:ObjectProperty rdf:about="&time;intervalMeets">
+        <rdfs:domain rdf:resource="&time;ProperInterval"/>
+        <rdfs:range rdf:resource="&time;ProperInterval"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalMetBy -->
+
+    <owl:ObjectProperty rdf:about="&time;intervalMetBy">
+        <owl:inverseOf rdf:resource="&time;intervalMeets"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalOverlappedBy -->
+
+    <owl:ObjectProperty rdf:about="&time;intervalOverlappedBy">
+        <rdfs:subPropertyOf rdf:resource="&timeEvents;overlaps"/>
+        <owl:inverseOf rdf:resource="&time;intervalOverlaps"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalOverlaps -->
+
+    <owl:ObjectProperty rdf:about="&time;intervalOverlaps">
+        <rdfs:subPropertyOf rdf:resource="&timeEvents;overlaps"/>
+        <rdfs:range rdf:resource="&time;ProperInterval"/>
+        <rdfs:domain rdf:resource="&time;ProperInterval"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalStartedBy -->
+
+    <owl:ObjectProperty rdf:about="&time;intervalStartedBy">
+        <rdfs:subPropertyOf rdf:resource="&timeEvents;overlaps"/>
+        <owl:inverseOf rdf:resource="&time;intervalStarts"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalStarts -->
+
+    <owl:ObjectProperty rdf:about="&time;intervalStarts">
+        <rdfs:subPropertyOf rdf:resource="&timeEvents;overlaps"/>
+        <rdfs:range rdf:resource="&time;ProperInterval"/>
+        <rdfs:domain rdf:resource="&time;ProperInterval"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#timeZone -->
+
+    <owl:ObjectProperty rdf:about="&time;timeZone">
+        <rdfs:domain rdf:resource="&time;DateTimeDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/timezone#TimeZone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#unitType -->
+
+    <owl:ObjectProperty rdf:about="&time;unitType">
+        <rdfs:domain rdf:resource="&time;DateTimeDescription"/>
+        <rdfs:range rdf:resource="&time;TemporalUnit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2006/time#day -->
+
+    <owl:DatatypeProperty rdf:about="&time;day">
+        <rdfs:range rdf:resource="&xsd;gDay"/>
+        <rdfs:domain rdf:resource="&time;DateTimeDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#dayOfYear -->
+
+    <owl:DatatypeProperty rdf:about="&time;dayOfYear">
+        <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
+        <rdfs:domain rdf:resource="&time;DateTimeDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#days -->
+
+    <owl:DatatypeProperty rdf:about="&time;days">
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+        <rdfs:domain rdf:resource="&time;DurationDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hour -->
+
+    <owl:DatatypeProperty rdf:about="&time;hour">
+        <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
+        <rdfs:domain rdf:resource="&time;DateTimeDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hours -->
+
+    <owl:DatatypeProperty rdf:about="&time;hours">
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+        <rdfs:domain rdf:resource="&time;DurationDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#inXSDDateTime -->
+
+    <owl:DatatypeProperty rdf:about="&time;inXSDDateTime">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain rdf:resource="&time;Instant"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#minute -->
+
+    <owl:DatatypeProperty rdf:about="&time;minute">
+        <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
+        <rdfs:domain rdf:resource="&time;DateTimeDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#minutes -->
+
+    <owl:DatatypeProperty rdf:about="&time;minutes">
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+        <rdfs:domain rdf:resource="&time;DurationDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#month -->
+
+    <owl:DatatypeProperty rdf:about="&time;month">
+        <rdfs:range rdf:resource="&xsd;gMonth"/>
+        <rdfs:domain rdf:resource="&time;DateTimeDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#months -->
+
+    <owl:DatatypeProperty rdf:about="&time;months">
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+        <rdfs:domain rdf:resource="&time;DurationDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#second -->
+
+    <owl:DatatypeProperty rdf:about="&time;second">
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+        <rdfs:domain rdf:resource="&time;DateTimeDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#seconds -->
+
+    <owl:DatatypeProperty rdf:about="&time;seconds">
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+        <rdfs:domain rdf:resource="&time;DurationDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#week -->
+
+    <owl:DatatypeProperty rdf:about="&time;week">
+        <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
+        <rdfs:domain rdf:resource="&time;DateTimeDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#weeks -->
+
+    <owl:DatatypeProperty rdf:about="&time;weeks">
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+        <rdfs:domain rdf:resource="&time;DurationDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#xsdDateTime -->
+
+    <owl:DatatypeProperty rdf:about="&time;xsdDateTime">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain rdf:resource="&time;DateTimeInterval"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#year -->
+
+    <owl:DatatypeProperty rdf:about="&time;year">
+        <rdfs:range rdf:resource="&xsd;gYear"/>
+        <rdfs:domain rdf:resource="&time;DateTimeDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#years -->
+
+    <owl:DatatypeProperty rdf:about="&time;years">
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+        <rdfs:domain rdf:resource="&time;DurationDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.intelligence.tuc.gr/2011/timeEvents#Event -->
+
+    <owl:Class rdf:about="&timeEvents;Event">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">A class that represents a n-ary temporal relation. An instance of the relation linking the n individuals (subject, object, time interval) is then an instance of this class.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <owl:Class rdf:about="&skos;Concept"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeDescription -->
+
+    <owl:Class rdf:about="&time;DateTimeDescription">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;year"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;day"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;minute"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;hour"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;timeZone"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;week"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;unitType"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;dayOfWeek"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;dayOfYear"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;month"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;second"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeInterval -->
+
+    <owl:Class rdf:about="&time;DateTimeInterval">
+        <rdfs:subClassOf rdf:resource="&time;ProperInterval"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DayOfWeek -->
+
+    <owl:Class rdf:about="&time;DayOfWeek">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&time;Monday"/>
+                    <rdf:Description rdf:about="&time;Sunday"/>
+                    <rdf:Description rdf:about="&time;Wednesday"/>
+                    <rdf:Description rdf:about="&time;Thursday"/>
+                    <rdf:Description rdf:about="&time;Saturday"/>
+                    <rdf:Description rdf:about="&time;Friday"/>
+                    <rdf:Description rdf:about="&time;Tuesday"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DurationDescription -->
+
+    <owl:Class rdf:about="&time;DurationDescription">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;days"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;weeks"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;minutes"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;seconds"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;years"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;hours"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;months"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Instant -->
+
+    <owl:Class rdf:about="&time;Instant">
+        <rdfs:subClassOf rdf:resource="&time;TemporalEntity"/>
+        <owl:disjointWith rdf:resource="&time;ProperInterval"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Interval -->
+
+    <owl:Class rdf:about="&time;Interval">
+        <rdfs:subClassOf rdf:resource="&time;TemporalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#January -->
+
+    <owl:Class rdf:about="&time;January">
+        <rdfs:subClassOf rdf:resource="&time;DateTimeDescription"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;unitType"/>
+                <owl:hasValue rdf:resource="&time;unitMonth"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;month"/>
+                <owl:hasValue rdf:datatype="&xsd;gMonth">--01</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#ProperInterval -->
+
+    <owl:Class rdf:about="&time;ProperInterval">
+        <rdfs:subClassOf rdf:resource="&time;Interval"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalEntity -->
+
+    <owl:Class rdf:about="&time;TemporalEntity">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&time;Instant"/>
+                    <rdf:Description rdf:about="&time;Interval"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalUnit -->
+
+    <owl:Class rdf:about="&time;TemporalUnit">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&time;unitDay"/>
+                    <rdf:Description rdf:about="&time;unitWeek"/>
+                    <rdf:Description rdf:about="&time;unitMonth"/>
+                    <rdf:Description rdf:about="&time;unitHour"/>
+                    <rdf:Description rdf:about="&time;unitSecond"/>
+                    <rdf:Description rdf:about="&time;unitMinute"/>
+                    <rdf:Description rdf:about="&time;unitYear"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Year -->
+
+    <owl:Class rdf:about="&time;Year">
+        <rdfs:subClassOf rdf:resource="&time;DurationDescription"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;weeks"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;hours"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;days"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;years"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;seconds"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;months"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;minutes"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/timezone#TimeZone -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/timezone#TimeZone"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#ACCESSUS_ET_RECESSUS -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;ACCESSUS_ET_RECESSUS">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:broader rdf:resource="&untitled-ontology-32;TERM"/>
+        <denotes rdf:resource="&untitled-ontology-32;TREPIDATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#CELESTIAL_SPHERE -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;CELESTIAL_SPHERE">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:broader rdf:resource="&untitled-ontology-32;CONCEPT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#CONCEPT -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;CONCEPT">
+        <rdf:type rdf:resource="&skos;Concept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#DECIMA_SPHAERA -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;DECIMA_SPHAERA">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <denotes rdf:resource="&untitled-ontology-32;TENTH_SPHERE"/>
+        <skos:broader rdf:resource="&untitled-ontology-32;TERM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#DIURNAL_MOTION -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;DIURNAL_MOTION">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <isCausedBy rdf:resource="&untitled-ontology-32;Ev1457691349665"/>
+        <isCausedBy rdf:resource="&untitled-ontology-32;Ev1457691349679"/>
+        <isCausedBy rdf:resource="&untitled-ontology-32;Ev1457691349692"/>
+        <isDenotedBy rdf:resource="&untitled-ontology-32;MOTUS_DIURNUS"/>
+        <skos:broader rdf:resource="&untitled-ontology-32;MOVEMENT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#DTI1456422398487 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;DTI1456422398487">
+        <rdf:type rdf:resource="&time;DateTimeInterval"/>
+        <time:hasBeginning rdf:resource="&untitled-ontology-32;Ins1456422398488"/>
+        <time:hasEnd rdf:resource="&untitled-ontology-32;Ins1456422398489"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#DTI1456423557765 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;DTI1456423557765">
+        <rdf:type rdf:resource="&time;DateTimeInterval"/>
+        <time:hasBeginning rdf:resource="&untitled-ontology-32;Ins1456423557781"/>
+        <time:hasEnd rdf:resource="&untitled-ontology-32;Ins1456423557796"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#DTI1456423930952 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;DTI1456423930952">
+        <rdf:type rdf:resource="&time;DateTimeInterval"/>
+        <time:hasBeginning rdf:resource="&untitled-ontology-32;Ins1456423930968"/>
+        <time:hasEnd rdf:resource="&untitled-ontology-32;Ins1456423930984"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#DTI1457691439152 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;DTI1457691439152">
+        <rdf:type rdf:resource="&time;DateTimeInterval"/>
+        <time:hasBeginning rdf:resource="&untitled-ontology-32;Ins1457691439170"/>
+        <time:hasEnd rdf:resource="&untitled-ontology-32;Ins1457691439180"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#DTI1457692515799 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;DTI1457692515799">
+        <rdf:type rdf:resource="&time;DateTimeInterval"/>
+        <time:hasBeginning rdf:resource="&untitled-ontology-32;Ins1457692515808"/>
+        <time:hasEnd rdf:resource="&untitled-ontology-32;Ins1457692515818"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#DTI1457692794441 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;DTI1457692794441">
+        <rdf:type rdf:resource="&time;DateTimeInterval"/>
+        <time:hasBeginning rdf:resource="&untitled-ontology-32;Ins1457692794451"/>
+        <time:hasEnd rdf:resource="&untitled-ontology-32;Ins1457692794463"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#DTI1457948860557 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;DTI1457948860557">
+        <rdf:type rdf:resource="&time;DateTimeInterval"/>
+        <time:hasBeginning rdf:resource="&untitled-ontology-32;Ins1457948860619"/>
+        <time:hasEnd rdf:resource="&untitled-ontology-32;Ins1457948860666"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#DTI1457949674467 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;DTI1457949674467">
+        <rdf:type rdf:resource="&time;DateTimeInterval"/>
+        <time:hasBeginning rdf:resource="&untitled-ontology-32;Ins1457949674483"/>
+        <time:hasEnd rdf:resource="&untitled-ontology-32;Ins1457949674529"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#DTI1457949728767 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;DTI1457949728767">
+        <rdf:type rdf:resource="&time;DateTimeInterval"/>
+        <time:hasBeginning rdf:resource="&untitled-ontology-32;Ins1457949728830"/>
+        <time:hasEnd rdf:resource="&untitled-ontology-32;Ins1457949728877"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#EIGHTH_SPHERE -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;EIGHTH_SPHERE">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:broader rdf:resource="&untitled-ontology-32;CELESTIAL_SPHERE"/>
+        <isDenotedBy rdf:resource="&untitled-ontology-32;Ev1456423931093"/>
+        <causes rdf:resource="&untitled-ontology-32;Ev1457692592812"/>
+        <causes rdf:resource="&untitled-ontology-32;Ev1457893551918"/>
+        <causes rdf:resource="&untitled-ontology-32;Ev1457893812281"/>
+        <isDenotedBy rdf:resource="&untitled-ontology-32;FIRMAMENTUM"/>
+        <isDenotedBy rdf:resource="&untitled-ontology-32;SPHAERA_STELLARUM_FIXARUM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#ELEVENTH_SPHERE -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;ELEVENTH_SPHERE">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:broader rdf:resource="&untitled-ontology-32;CELESTIAL_SPHERE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#EU1457431838325 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;EU1457431838325">
+        <rdf:type rdf:resource="&time;Instant"/>
+        <time:inXSDDateTime rdf:datatype="&xsd;dateTime">9999-01-01T00:00:00</time:inXSDDateTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ev1456422398490 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ev1456422398490">
+        <rdf:type rdf:resource="&timeEvents;Event"/>
+        <timeEvents:during rdf:resource="&untitled-ontology-32;DTI1456422398487"/>
+        <Synonym rdf:resource="&untitled-ontology-32;FIRMAMENTUM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ev1456422398503 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ev1456422398503">
+        <rdf:type rdf:resource="&timeEvents;Event"/>
+        <timeEvents:during rdf:resource="&untitled-ontology-32;DTI1456422398487"/>
+        <Synonym rdf:resource="&untitled-ontology-32;PRIMUS_MOTUS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ev1456422398504 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ev1456422398504">
+        <rdf:type rdf:resource="&timeEvents;Event"/>
+        <timeEvents:during rdf:resource="&untitled-ontology-32;DTI1456422398487"/>
+        <Synonym rdf:resource="&untitled-ontology-32;PRIMUM_MOBILE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ev1456422398505 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ev1456422398505">
+        <rdf:type rdf:resource="&timeEvents;Event"/>
+        <timeEvents:during rdf:resource="&untitled-ontology-32;DTI1456422398487"/>
+        <Synonym rdf:resource="&untitled-ontology-32;PRIMUM_MOBILE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ev1456422398508 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ev1456422398508">
+        <rdf:type rdf:resource="&timeEvents;Event"/>
+        <timeEvents:during rdf:resource="&untitled-ontology-32;DTI1456422398487"/>
+        <Synonym rdf:resource="&untitled-ontology-32;PRIMUM_MOBILE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ev1456422398509 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ev1456422398509">
+        <rdf:type rdf:resource="&timeEvents;Event"/>
+        <timeEvents:during rdf:resource="&untitled-ontology-32;DTI1456422398487"/>
+        <Synonym rdf:resource="&untitled-ontology-32;SPHAERA_STELLARUM_FIXARUM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ev1456422398510 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ev1456422398510">
+        <rdf:type rdf:resource="&timeEvents;Event"/>
+        <timeEvents:during rdf:resource="&untitled-ontology-32;DTI1456422398487"/>
+        <Synonym rdf:resource="&untitled-ontology-32;NONA_SPHAERA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ev1456423557812 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ev1456423557812">
+        <rdf:type rdf:resource="&timeEvents;Event"/>
+        <timeEvents:during rdf:resource="&untitled-ontology-32;DTI1457691439152"/>
+        <denotes rdf:resource="&untitled-ontology-32;NINTH_SPHERE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ev1456423557890 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ev1456423557890">
+        <rdf:type rdf:resource="&timeEvents;Event"/>
+        <timeEvents:during rdf:resource="&untitled-ontology-32;DTI1456423557765"/>
+        <denotes rdf:resource="&untitled-ontology-32;EIGHTH_SPHERE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ev1456423931077 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ev1456423931077">
+        <rdf:type rdf:resource="&timeEvents;Event"/>
+        <timeEvents:during rdf:resource="&untitled-ontology-32;DTI1457691439152"/>
+        <isDenotedBy rdf:resource="&untitled-ontology-32;PRIMUM_MOBILE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ev1456423931093 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ev1456423931093">
+        <rdf:type rdf:resource="&timeEvents;Event"/>
+        <timeEvents:during rdf:resource="&untitled-ontology-32;DTI1456423930952"/>
+        <isDenotedBy rdf:resource="&untitled-ontology-32;PRIMUM_MOBILE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ev1457431838339 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ev1457431838339">
+        <rdf:type rdf:resource="&timeEvents;Event"/>
+        <skos:broader rdf:resource="&untitled-ontology-32;CELESTIAL_SPHERE"/>
+        <timeEvents:during rdf:resource="&untitled-ontology-32;UI1457431838311"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ev1457691349665 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ev1457691349665">
+        <rdf:type rdf:resource="&timeEvents;Event"/>
+        <timeEvents:during rdf:resource="&untitled-ontology-32;DTI1457692515799"/>
+        <isCausedBy rdf:resource="&untitled-ontology-32;TENTH_SPHERE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ev1457691349679 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ev1457691349679">
+        <rdf:type rdf:resource="&timeEvents;Event"/>
+        <timeEvents:during rdf:resource="&untitled-ontology-32;DTI1456422398487"/>
+        <isCausedBy rdf:resource="&untitled-ontology-32;EIGHTH_SPHERE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ev1457691349692 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ev1457691349692">
+        <rdf:type rdf:resource="&timeEvents;Event"/>
+        <timeEvents:during rdf:resource="&untitled-ontology-32;DTI1457691439152"/>
+        <isCausedBy rdf:resource="&untitled-ontology-32;NINTH_SPHERE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ev1457692592774 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ev1457692592774">
+        <rdf:type rdf:resource="&timeEvents;Event"/>
+        <causes rdf:resource="&untitled-ontology-32;DIURNAL_MOTION"/>
+        <timeEvents:during rdf:resource="&untitled-ontology-32;DTI1457692515799"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ev1457692592793 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ev1457692592793">
+        <rdf:type rdf:resource="&timeEvents;Event"/>
+        <causes rdf:resource="&untitled-ontology-32;DIURNAL_MOTION"/>
+        <timeEvents:during rdf:resource="&untitled-ontology-32;DTI1457691439152"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ev1457692592812 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ev1457692592812">
+        <rdf:type rdf:resource="&timeEvents;Event"/>
+        <causes rdf:resource="&untitled-ontology-32;DIURNAL_MOTION"/>
+        <timeEvents:during rdf:resource="&untitled-ontology-32;DTI1456423557765"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ev1457692794416 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ev1457692794416">
+        <rdf:type rdf:resource="&timeEvents;Event"/>
+        <skos:broader rdf:resource="&untitled-ontology-32;CELESTIAL_SPHERE"/>
+        <timeEvents:during rdf:resource="&untitled-ontology-32;DTI1457692794441"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ev1457693207856 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ev1457693207856">
+        <rdf:type rdf:resource="&timeEvents;Event"/>
+        <denotes rdf:resource="&untitled-ontology-32;DECIMA_SPHAERA"/>
+        <timeEvents:during rdf:resource="&untitled-ontology-32;DTI1457692515799"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ev1457893420775 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ev1457893420775">
+        <rdf:type rdf:resource="&timeEvents;Event"/>
+        <timeEvents:during rdf:resource="&untitled-ontology-32;DTI1457691439152"/>
+        <isCausedBy rdf:resource="&untitled-ontology-32;EIGHTH_SPHERE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ev1457893551918 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ev1457893551918">
+        <rdf:type rdf:resource="&timeEvents;Event"/>
+        <timeEvents:during rdf:resource="&untitled-ontology-32;DTI1457691439152"/>
+        <causes rdf:resource="&untitled-ontology-32;PRECESSION_OF_THE_EQUINOX"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ev1457893630771 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ev1457893630771">
+        <rdf:type rdf:resource="&timeEvents;Event"/>
+        <timeEvents:during rdf:resource="&untitled-ontology-32;DTI1457692515799"/>
+        <isCausedBy rdf:resource="&untitled-ontology-32;NINTH_SPHERE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ev1457893696551 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ev1457893696551">
+        <rdf:type rdf:resource="&timeEvents;Event"/>
+        <timeEvents:during rdf:resource="&untitled-ontology-32;DTI1457692515799"/>
+        <causes rdf:resource="&untitled-ontology-32;PRECESSION_OF_THE_EQUINOX"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ev1457893785489 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ev1457893785489">
+        <rdf:type rdf:resource="&timeEvents;Event"/>
+        <timeEvents:during rdf:resource="&untitled-ontology-32;DTI1457692515799"/>
+        <isCausedBy rdf:resource="&untitled-ontology-32;EIGHTH_SPHERE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ev1457893812281 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ev1457893812281">
+        <rdf:type rdf:resource="&timeEvents;Event"/>
+        <timeEvents:during rdf:resource="&untitled-ontology-32;DTI1457692515799"/>
+        <causes rdf:resource="&untitled-ontology-32;TREPIDATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ev1457946399120 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ev1457946399120">
+        <rdf:type rdf:resource="&timeEvents;Event"/>
+        <timeEvents:during rdf:resource="&untitled-ontology-32;DTI1457692515799"/>
+        <isDenotedBy rdf:resource="&untitled-ontology-32;PRIMUM_MOBILE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ev1457948860525 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ev1457948860525">
+        <rdf:type rdf:resource="&timeEvents;Event"/>
+        <timeEvents:during rdf:resource="&untitled-ontology-32;DTI1457948860557"/>
+        <skos:broader rdf:resource="&untitled-ontology-32;MOVEMENT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ev1457949674436 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ev1457949674436">
+        <rdf:type rdf:resource="&timeEvents;Event"/>
+        <timeEvents:during rdf:resource="&untitled-ontology-32;DTI1457949728767"/>
+        <skos:broader rdf:resource="&untitled-ontology-32;MOVEMENT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#FIRMAMENTUM -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;FIRMAMENTUM">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <denotes rdf:resource="&untitled-ontology-32;EIGHTH_SPHERE"/>
+        <Synonym rdf:resource="&untitled-ontology-32;Ev1456422398508"/>
+        <Synonym rdf:resource="&untitled-ontology-32;SPHAERA_STELLARUM_FIXARUM"/>
+        <skos:broader rdf:resource="&untitled-ontology-32;TERM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ins1456422398488 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ins1456422398488">
+        <rdf:type rdf:resource="&time;Instant"/>
+        <time:inXSDDateTime rdf:datatype="&xsd;dateTime">0300-01-01T00:00:00</time:inXSDDateTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ins1456422398489 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ins1456422398489">
+        <rdf:type rdf:resource="&time;Instant"/>
+        <time:inXSDDateTime rdf:datatype="&xsd;dateTime">0152-01-01T00:00:00</time:inXSDDateTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ins1456423557781 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ins1456423557781">
+        <rdf:type rdf:resource="&time;Instant"/>
+        <time:inXSDDateTime rdf:datatype="&xsd;dateTime">0300-01-01T00:00:00</time:inXSDDateTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ins1456423557796 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ins1456423557796">
+        <rdf:type rdf:resource="&time;Instant"/>
+        <time:inXSDDateTime rdf:datatype="&xsd;dateTime">0152-01-01T00:00:00</time:inXSDDateTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ins1456423930968 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ins1456423930968">
+        <rdf:type rdf:resource="&time;Instant"/>
+        <time:inXSDDateTime rdf:datatype="&xsd;dateTime">0300-01-01T00:00:00</time:inXSDDateTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ins1456423930984 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ins1456423930984">
+        <rdf:type rdf:resource="&time;Instant"/>
+        <time:inXSDDateTime rdf:datatype="&xsd;dateTime">0152-01-01T00:00:00</time:inXSDDateTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ins1457431838319 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ins1457431838319">
+        <rdf:type rdf:resource="&time;Instant"/>
+        <time:inXSDDateTime rdf:datatype="&xsd;dateTime">0152-01-01T00:00:00</time:inXSDDateTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ins1457691439170 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ins1457691439170">
+        <rdf:type rdf:resource="&time;Instant"/>
+        <time:inXSDDateTime rdf:datatype="&xsd;dateTime">0152-01-01T00:00:00</time:inXSDDateTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ins1457691439180 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ins1457691439180">
+        <rdf:type rdf:resource="&time;Instant"/>
+        <time:inXSDDateTime rdf:datatype="&xsd;dateTime">1252-01-01T00:00:00</time:inXSDDateTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ins1457692515808 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ins1457692515808">
+        <rdf:type rdf:resource="&time;Instant"/>
+        <time:inXSDDateTime rdf:datatype="&xsd;dateTime">1252-01-01T00:00:00</time:inXSDDateTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ins1457692515818 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ins1457692515818">
+        <rdf:type rdf:resource="&time;Instant"/>
+        <time:inXSDDateTime rdf:datatype="&xsd;dateTime">1589-01-01T00:00:00</time:inXSDDateTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ins1457692794451 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ins1457692794451">
+        <rdf:type rdf:resource="&time;Instant"/>
+        <time:inXSDDateTime rdf:datatype="&xsd;dateTime">1252-01-01T00:00:00</time:inXSDDateTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ins1457692794463 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ins1457692794463">
+        <rdf:type rdf:resource="&time;Instant"/>
+        <time:inXSDDateTime rdf:datatype="&xsd;dateTime">9999-01-01T00:00:00</time:inXSDDateTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ins1457948860619 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ins1457948860619">
+        <rdf:type rdf:resource="&time;Instant"/>
+        <time:inXSDDateTime rdf:datatype="&xsd;dateTime">0130-01-01T00:00:00</time:inXSDDateTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ins1457948860666 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ins1457948860666">
+        <rdf:type rdf:resource="&time;Instant"/>
+        <time:inXSDDateTime rdf:datatype="&xsd;dateTime">9999-01-01T00:00:00</time:inXSDDateTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ins1457949674483 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ins1457949674483">
+        <rdf:type rdf:resource="&time;Instant"/>
+        <time:inXSDDateTime rdf:datatype="&xsd;dateTime">0850-01-01T00:00:00</time:inXSDDateTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ins1457949674529 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ins1457949674529">
+        <rdf:type rdf:resource="&time;Instant"/>
+        <time:inXSDDateTime rdf:datatype="&xsd;dateTime">2016-01-01T00:00:00</time:inXSDDateTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ins1457949728830 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ins1457949728830">
+        <rdf:type rdf:resource="&time;Instant"/>
+        <time:inXSDDateTime rdf:datatype="&xsd;dateTime">0850-01-01T00:00:00</time:inXSDDateTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#Ins1457949728877 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;Ins1457949728877">
+        <rdf:type rdf:resource="&time;Instant"/>
+        <time:inXSDDateTime rdf:datatype="&xsd;dateTime">1602-01-01T00:00:00</time:inXSDDateTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#MOTUS -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;MOTUS">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <denotes rdf:resource="&untitled-ontology-32;MOVEMENT"/>
+        <skos:broader rdf:resource="&untitled-ontology-32;TERM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#MOTUS_AB_OCCIDENTE_IN_ORIENTEM -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;MOTUS_AB_OCCIDENTE_IN_ORIENTEM">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <denotes rdf:resource="&untitled-ontology-32;PRECESSION_OF_THE_EQUINOX"/>
+        <skos:broader rdf:resource="&untitled-ontology-32;TERM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#MOTUS_DIURNUS -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;MOTUS_DIURNUS">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <denotes rdf:resource="&untitled-ontology-32;DIURNAL_MOTION"/>
+        <skos:broader rdf:resource="&untitled-ontology-32;TERM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#MOVEMENT -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;MOVEMENT">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:broader rdf:resource="&untitled-ontology-32;CONCEPT"/>
+        <isDenotedBy rdf:resource="&untitled-ontology-32;MOTUS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#NINTH_SPHERE -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;NINTH_SPHERE">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <isDenotedBy rdf:resource="&untitled-ontology-32;Ev1456423931077"/>
+        <skos:broader rdf:resource="&untitled-ontology-32;Ev1457431838339"/>
+        <causes rdf:resource="&untitled-ontology-32;Ev1457692592793"/>
+        <causes rdf:resource="&untitled-ontology-32;Ev1457893696551"/>
+        <isDenotedBy rdf:resource="&untitled-ontology-32;NONA_SPHAERA"/>
+        <isDenotedBy rdf:resource="&untitled-ontology-32;NONUM_COELUM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#NONA_SPHAERA -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;NONA_SPHAERA">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <Synonym rdf:resource="&untitled-ontology-32;Ev1456422398503"/>
+        <Synonym rdf:resource="&untitled-ontology-32;Ev1456422398504"/>
+        <denotes rdf:resource="&untitled-ontology-32;NINTH_SPHERE"/>
+        <Synonym rdf:resource="&untitled-ontology-32;NONUM_COELUM"/>
+        <skos:broader rdf:resource="&untitled-ontology-32;TERM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#NONUM_COELUM -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;NONUM_COELUM">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <denotes rdf:resource="&untitled-ontology-32;NINTH_SPHERE"/>
+        <Synonym rdf:resource="&untitled-ontology-32;NONA_SPHAERA"/>
+        <skos:broader rdf:resource="&untitled-ontology-32;TERM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#PRECESSION_OF_THE_EQUINOX -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;PRECESSION_OF_THE_EQUINOX">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <isCausedBy rdf:resource="&untitled-ontology-32;Ev1457893420775"/>
+        <isCausedBy rdf:resource="&untitled-ontology-32;Ev1457893630771"/>
+        <skos:broader rdf:resource="&untitled-ontology-32;Ev1457948860525"/>
+        <isDenotedBy rdf:resource="&untitled-ontology-32;MOTUS_AB_OCCIDENTE_IN_ORIENTEM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#PRIMUM_MOBILE -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;PRIMUM_MOBILE">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <Synonym rdf:resource="&untitled-ontology-32;Ev1456422398490"/>
+        <Synonym rdf:resource="&untitled-ontology-32;Ev1456422398509"/>
+        <Synonym rdf:resource="&untitled-ontology-32;Ev1456422398510"/>
+        <denotes rdf:resource="&untitled-ontology-32;Ev1456423557812"/>
+        <denotes rdf:resource="&untitled-ontology-32;Ev1456423557890"/>
+        <denotes rdf:resource="&untitled-ontology-32;Ev1457693207856"/>
+        <Synonym rdf:resource="&untitled-ontology-32;PRIMUS_MOTUS"/>
+        <skos:broader rdf:resource="&untitled-ontology-32;TERM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#PRIMUS_MOTUS -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;PRIMUS_MOTUS">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:broader rdf:resource="&untitled-ontology-32;TERM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#SPHAERA_STELLARUM_FIXARUM -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;SPHAERA_STELLARUM_FIXARUM">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <denotes rdf:resource="&untitled-ontology-32;EIGHTH_SPHERE"/>
+        <Synonym rdf:resource="&untitled-ontology-32;Ev1456422398505"/>
+        <Synonym rdf:resource="&untitled-ontology-32;FIRMAMENTUM"/>
+        <skos:broader rdf:resource="&untitled-ontology-32;TERM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#TENTH_SPHERE -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;TENTH_SPHERE">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <isDenotedBy rdf:resource="&untitled-ontology-32;DECIMA_SPHAERA"/>
+        <causes rdf:resource="&untitled-ontology-32;Ev1457692592774"/>
+        <skos:broader rdf:resource="&untitled-ontology-32;Ev1457692794416"/>
+        <isDenotedBy rdf:resource="&untitled-ontology-32;Ev1457946399120"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#TERM -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;TERM">
+        <rdf:type rdf:resource="&skos;Concept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#TREPIDATION -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;TREPIDATION">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <isDenotedBy rdf:resource="&untitled-ontology-32;ACCESSUS_ET_RECESSUS"/>
+        <isCausedBy rdf:resource="&untitled-ontology-32;Ev1457893785489"/>
+        <skos:broader rdf:resource="&untitled-ontology-32;Ev1457949674436"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2016/1/untitled-ontology-32#UI1457431838311 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-32;UI1457431838311">
+        <rdf:type rdf:resource="&time;ProperInterval"/>
+        <time:hasEnd rdf:resource="&untitled-ontology-32;EU1457431838325"/>
+        <time:hasBeginning rdf:resource="&untitled-ontology-32;Ins1457431838319"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Friday -->
+
+    <owl:NamedIndividual rdf:about="&time;Friday">
+        <rdf:type rdf:resource="&time;DayOfWeek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Monday -->
+
+    <owl:NamedIndividual rdf:about="&time;Monday">
+        <rdf:type rdf:resource="&time;DayOfWeek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Saturday -->
+
+    <owl:NamedIndividual rdf:about="&time;Saturday">
+        <rdf:type rdf:resource="&time;DayOfWeek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Sunday -->
+
+    <owl:NamedIndividual rdf:about="&time;Sunday">
+        <rdf:type rdf:resource="&time;DayOfWeek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Thursday -->
+
+    <owl:NamedIndividual rdf:about="&time;Thursday">
+        <rdf:type rdf:resource="&time;DayOfWeek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Tuesday -->
+
+    <owl:NamedIndividual rdf:about="&time;Tuesday">
+        <rdf:type rdf:resource="&time;DayOfWeek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Wednesday -->
+
+    <owl:NamedIndividual rdf:about="&time;Wednesday">
+        <rdf:type rdf:resource="&time;DayOfWeek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#unitDay -->
+
+    <owl:NamedIndividual rdf:about="&time;unitDay">
+        <rdf:type rdf:resource="&time;TemporalUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#unitHour -->
+
+    <owl:NamedIndividual rdf:about="&time;unitHour">
+        <rdf:type rdf:resource="&time;TemporalUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#unitMinute -->
+
+    <owl:NamedIndividual rdf:about="&time;unitMinute">
+        <rdf:type rdf:resource="&time;TemporalUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#unitMonth -->
+
+    <owl:NamedIndividual rdf:about="&time;unitMonth">
+        <rdf:type rdf:resource="&time;TemporalUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#unitSecond -->
+
+    <owl:NamedIndividual rdf:about="&time;unitSecond">
+        <rdf:type rdf:resource="&time;TemporalUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#unitWeek -->
+
+    <owl:NamedIndividual rdf:about="&time;unitWeek">
+        <rdf:type rdf:resource="&time;TemporalUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#unitYear -->
+
+    <owl:NamedIndividual rdf:about="&time;unitYear">
+        <rdf:type rdf:resource="&time;TemporalUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="&untitled-ontology-32;e2">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&untitled-ontology-32;i2">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&untitled-ontology-32;x">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&untitled-ontology-32;e1">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&untitled-ontology-32;i1">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&untitled-ontology-32;y">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&untitled-ontology-32;z">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&timeEvents;during"/>
+                        <swrl:argument1 rdf:resource="&untitled-ontology-32;e2"/>
+                        <swrl:argument2 rdf:resource="&untitled-ontology-32;i2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&untitled-ontology-32;Synonym"/>
+                                <swrl:argument2 rdf:resource="&untitled-ontology-32;e1"/>
+                                <swrl:argument1 rdf:resource="&untitled-ontology-32;x"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                                <swrl:argument1 rdf:resource="&untitled-ontology-32;i1"/>
+                                                <swrl:argument2 rdf:resource="&untitled-ontology-32;i2"/>
+                                                <swrl:propertyPredicate rdf:resource="&time;intervalEquals"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="&timeEvents;Event"/>
+                                                                <swrl:argument1 rdf:resource="&untitled-ontology-32;e1"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="&untitled-ontology-32;Synonym"/>
+                                                                        <swrl:argument1 rdf:resource="&untitled-ontology-32;e2"/>
+                                                                        <swrl:argument2 rdf:resource="&untitled-ontology-32;z"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="&untitled-ontology-32;Synonym"/>
+                                                                                <swrl:argument1 rdf:resource="&untitled-ontology-32;e1"/>
+                                                                                <swrl:argument2 rdf:resource="&untitled-ontology-32;y"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                                                        <rdf:first>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="&swrl;DifferentIndividualsAtom"/>
+                                                                                                <swrl:argument1 rdf:resource="&untitled-ontology-32;y"/>
+                                                                                                <swrl:argument2 rdf:resource="&untitled-ontology-32;z"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:first>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                                                                        <swrl:classPredicate rdf:resource="&timeEvents;Event"/>
+                                                                                        <swrl:argument1 rdf:resource="&untitled-ontology-32;e2"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="&untitled-ontology-32;Synonym"/>
+                                                        <swrl:argument2 rdf:resource="&untitled-ontology-32;e2"/>
+                                                        <swrl:argument1 rdf:resource="&untitled-ontology-32;y"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="&timeEvents;during"/>
+                                        <swrl:argument1 rdf:resource="&untitled-ontology-32;e1"/>
+                                        <swrl:argument2 rdf:resource="&untitled-ontology-32;i1"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&untitled-ontology-32;Synonym"/>
+                        <swrl:argument2 rdf:resource="&untitled-ontology-32;e2"/>
+                        <swrl:argument1 rdf:resource="&untitled-ontology-32;x"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

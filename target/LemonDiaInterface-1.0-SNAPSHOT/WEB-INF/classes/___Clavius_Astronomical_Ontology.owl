@@ -1,0 +1,1785 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY untitled-ontology-3 "http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:untitled-ontology-3="http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <Ontology rdf:about="http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Definition -->
+
+    <AnnotationProperty rdf:about="&untitled-ontology-3;Definition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Antonym -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-3;Antonym"/>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Hyperonymy -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-3;Hyperonymy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Hyponymy -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-3;Hyponymy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Ontological_Relation -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-3;Ontological_Relation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Other_Denomination -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-3;Other_Denomination"/>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Synonym -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-3;Synonym"/>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#contains -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-3;contains"/>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#denotes -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-3;denotes"/>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#isComposedOf -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-3;isComposedOf">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-3;Ontological_Relation"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#isDenotedBy -->
+
+    <ObjectProperty rdf:about="&untitled-ontology-3;isDenotedBy"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Author -->
+
+    <DatatypeProperty rdf:about="&untitled-ontology-3;Author">
+        <rdfs:range>
+            <rdfs:Datatype>
+                <oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first>Ptolemy</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first>al-Farghānī</rdf:first>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Aequator_diei_ac_noctis -->
+
+    <Class rdf:about="&untitled-ontology-3;Aequator_diei_ac_noctis">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Aequidialis -->
+
+    <Class rdf:about="&untitled-ontology-3;Aequidialis">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Aster -->
+
+    <Class rdf:about="&untitled-ontology-3;Aster">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Aster_Erraticum -->
+
+    <Class rdf:about="&untitled-ontology-3;Aster_Erraticum">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#CIRCLE_OF_LATITUDES -->
+
+    <Class rdf:about="&untitled-ontology-3;CIRCLE_OF_LATITUDES">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;CONCEPT"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#CONCEPT -->
+
+    <Class rdf:about="&untitled-ontology-3;CONCEPT"/>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Cingulus_Primi_Motus -->
+
+    <Class rdf:about="&untitled-ontology-3;Cingulus_Primi_Motus">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Circulus_Aequidistans -->
+
+    <Class rdf:about="&untitled-ontology-3;Circulus_Aequidistans">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Circulus_Aequinoctialis -->
+
+    <Class rdf:about="&untitled-ontology-3;Circulus_Aequinoctialis">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Circulus_Aequinoctii -->
+
+    <Class rdf:about="&untitled-ontology-3;Circulus_Aequinoctii">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Circulus_Altitudinum -->
+
+    <Class rdf:about="&untitled-ontology-3;Circulus_Altitudinum">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Circulus_Antarcticus -->
+
+    <Class rdf:about="&untitled-ontology-3;Circulus_Antarcticus">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Circulus_Arcticus -->
+
+    <Class rdf:about="&untitled-ontology-3;Circulus_Arcticus">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Circulus_Declinationis -->
+
+    <Class rdf:about="&untitled-ontology-3;Circulus_Declinationis">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Circulus_Domorum_Celestium -->
+
+    <Class rdf:about="&untitled-ontology-3;Circulus_Domorum_Celestium">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Circulus_Extrinsecus -->
+
+    <Class rdf:about="&untitled-ontology-3;Circulus_Extrinsecus">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Circulus_Intrinsecus -->
+
+    <Class rdf:about="&untitled-ontology-3;Circulus_Intrinsecus">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Circulus_Latitudinum -->
+
+    <Class rdf:about="&untitled-ontology-3;Circulus_Latitudinum">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Circulus_Maximus -->
+
+    <Class rdf:about="&untitled-ontology-3;Circulus_Maximus">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Circulus_Non_maximus -->
+
+    <Class rdf:about="&untitled-ontology-3;Circulus_Non_maximus">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Circulus_Obliquus -->
+
+    <Class rdf:about="&untitled-ontology-3;Circulus_Obliquus">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Circulus_Parallelus -->
+
+    <Class rdf:about="&untitled-ontology-3;Circulus_Parallelus">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Circulus_Primarius -->
+
+    <Class rdf:about="&untitled-ontology-3;Circulus_Primarius">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Circulus_per_polos_mundi_ductus -->
+
+    <Class rdf:about="&untitled-ontology-3;Circulus_per_polos_mundi_ductus">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Circulus_positionum -->
+
+    <Class rdf:about="&untitled-ontology-3;Circulus_positionum">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Circulus_sphaerae -->
+
+    <Class rdf:about="&untitled-ontology-3;Circulus_sphaerae">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Colurus_Solstitiorum -->
+
+    <Class rdf:about="&untitled-ontology-3;Colurus_Solstitiorum">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Colurus_æquinoctiorum -->
+
+    <Class rdf:about="&untitled-ontology-3;Colurus_æquinoctiorum">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#EQUINOCTIAL_COLURE -->
+
+    <Class rdf:about="&untitled-ontology-3;EQUINOCTIAL_COLURE">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;CONCEPT"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#EXTRINSIC_CIRCLE -->
+
+    <Class rdf:about="&untitled-ontology-3;EXTRINSIC_CIRCLE">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;CONCEPT"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Errones -->
+
+    <Class rdf:about="&untitled-ontology-3;Errones">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#FIXED_STAR -->
+
+    <Class rdf:about="&untitled-ontology-3;FIXED_STAR">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;CONCEPT"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Firmamentum -->
+
+    <Class rdf:about="&untitled-ontology-3;Firmamentum">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#HEAVENS -->
+
+    <Class rdf:about="&untitled-ontology-3;HEAVENS">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;CONCEPT"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#HORIZON -->
+
+    <Class rdf:about="&untitled-ontology-3;HORIZON">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;CONCEPT"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#HOUR_CIRCLE -->
+
+    <Class rdf:about="&untitled-ontology-3;HOUR_CIRCLE">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;CONCEPT"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Horarius_Circulus -->
+
+    <Class rdf:about="&untitled-ontology-3;Horarius_Circulus">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Horizon -->
+
+    <Class rdf:about="&untitled-ontology-3;Horizon">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#INTRINSIC_CIRCLE -->
+
+    <Class rdf:about="&untitled-ontology-3;INTRINSIC_CIRCLE">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;CONCEPT"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#MAIOR_CIRCLE -->
+
+    <Class rdf:about="&untitled-ontology-3;MAIOR_CIRCLE">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;CONCEPT"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#MINOR_CIRCLE -->
+
+    <Class rdf:about="&untitled-ontology-3;MINOR_CIRCLE">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;CONCEPT"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Maior_Circulus -->
+
+    <Class rdf:about="&untitled-ontology-3;Maior_Circulus">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+        <untitled-ontology-3:Definition>Maior autem circulus in ſphæra dicitur, qui deſcriptus in ſuperficie ſphæræ ſuper eius centrum diuidit ſphæram in duo æqualia. (Comm. DE Spahera, cap. II)</untitled-ontology-3:Definition>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Meridianus -->
+
+    <Class rdf:about="&untitled-ontology-3;Meridianus">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Minor_Circulus -->
+
+    <Class rdf:about="&untitled-ontology-3;Minor_Circulus">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Motus_Irrationalis -->
+
+    <Class rdf:about="&untitled-ontology-3;Motus_Irrationalis">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Motus_Primus -->
+
+    <Class rdf:about="&untitled-ontology-3;Motus_Primus">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Motus_Rationalis -->
+
+    <Class rdf:about="&untitled-ontology-3;Motus_Rationalis">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Motus_Secundus -->
+
+    <Class rdf:about="&untitled-ontology-3;Motus_Secundus">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Motus_Sensualis -->
+
+    <Class rdf:about="&untitled-ontology-3;Motus_Sensualis">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Nona_Sphaera -->
+
+    <Class rdf:about="&untitled-ontology-3;Nona_Sphaera">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#OBLIQUE_CIRCLE -->
+
+    <Class rdf:about="&untitled-ontology-3;OBLIQUE_CIRCLE">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;CONCEPT"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Octava_Sphaera -->
+
+    <Class rdf:about="&untitled-ontology-3;Octava_Sphaera">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Orbis_Coelestis -->
+
+    <Class rdf:about="&untitled-ontology-3;Orbis_Coelestis">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Orbis_æquationis_diei -->
+
+    <Class rdf:about="&untitled-ontology-3;Orbis_æquationis_diei">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#PARALLEL_CIRCLE -->
+
+    <Class rdf:about="&untitled-ontology-3;PARALLEL_CIRCLE">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;CONCEPT"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#POSITION_CIRCLE -->
+
+    <Class rdf:about="&untitled-ontology-3;POSITION_CIRCLE">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;CONCEPT"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#PRIMARY_CIRCLE -->
+
+    <Class rdf:about="&untitled-ontology-3;PRIMARY_CIRCLE">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;CONCEPT"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Planeta -->
+
+    <Class rdf:about="&untitled-ontology-3;Planeta">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Polus_Antarcticus -->
+
+    <Class rdf:about="&untitled-ontology-3;Polus_Antarcticus">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Polus_Arcticus -->
+
+    <Class rdf:about="&untitled-ontology-3;Polus_Arcticus">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Polus_Australis -->
+
+    <Class rdf:about="&untitled-ontology-3;Polus_Australis">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Polus_Borealis -->
+
+    <Class rdf:about="&untitled-ontology-3;Polus_Borealis">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Polus_Meridionalis -->
+
+    <Class rdf:about="&untitled-ontology-3;Polus_Meridionalis">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Polus_Mundi -->
+
+    <Class rdf:about="&untitled-ontology-3;Polus_Mundi">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Polus_Septentrionalis -->
+
+    <Class rdf:about="&untitled-ontology-3;Polus_Septentrionalis">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Prima_Sphaera -->
+
+    <Class rdf:about="&untitled-ontology-3;Prima_Sphaera">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Primum_Mobile -->
+
+    <Class rdf:about="&untitled-ontology-3;Primum_Mobile">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Primus_Motus -->
+
+    <Class rdf:about="&untitled-ontology-3;Primus_Motus">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#SOLSTITIAL_COLURE -->
+
+    <Class rdf:about="&untitled-ontology-3;SOLSTITIAL_COLURE">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;CONCEPT"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Sphaera_Iovis -->
+
+    <Class rdf:about="&untitled-ontology-3;Sphaera_Iovis">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Sphaera_Lunae -->
+
+    <Class rdf:about="&untitled-ontology-3;Sphaera_Lunae">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Sphaera_Martis -->
+
+    <Class rdf:about="&untitled-ontology-3;Sphaera_Martis">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Sphaera_Materialis -->
+
+    <Class rdf:about="&untitled-ontology-3;Sphaera_Materialis">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Sphaera_Mercurii -->
+
+    <Class rdf:about="&untitled-ontology-3;Sphaera_Mercurii">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Sphaera_Mundi -->
+
+    <Class rdf:about="&untitled-ontology-3;Sphaera_Mundi">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Sphaera_Saturni -->
+
+    <Class rdf:about="&untitled-ontology-3;Sphaera_Saturni">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Sphaera_Solis -->
+
+    <Class rdf:about="&untitled-ontology-3;Sphaera_Solis">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Sphaera_Stellarum_Fixarum -->
+
+    <Class rdf:about="&untitled-ontology-3;Sphaera_Stellarum_Fixarum">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Sphaera_Veneris -->
+
+    <Class rdf:about="&untitled-ontology-3;Sphaera_Veneris">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Sphaera_obliqua -->
+
+    <Class rdf:about="&untitled-ontology-3;Sphaera_obliqua">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Sphaera_recta -->
+
+    <Class rdf:about="&untitled-ontology-3;Sphaera_recta">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Stella -->
+
+    <Class rdf:about="&untitled-ontology-3;Stella">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Stella_Fixa -->
+
+    <Class rdf:about="&untitled-ontology-3;Stella_Fixa">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#TERM -->
+
+    <Class rdf:about="&untitled-ontology-3;TERM"/>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Tropicus_Cancri -->
+
+    <Class rdf:about="&untitled-ontology-3;Tropicus_Cancri">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Tropicus_Capricorni -->
+
+    <Class rdf:about="&untitled-ontology-3;Tropicus_Capricorni">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Verticalis_Circulus -->
+
+    <Class rdf:about="&untitled-ontology-3;Verticalis_Circulus">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#Zodiacus -->
+
+    <Class rdf:about="&untitled-ontology-3;Zodiacus">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#ἀπλανὴς -->
+
+    <Class rdf:about="&untitled-ontology-3;ἀπλανὴς">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-3;TERM"/>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#aequator_diei_ac_noctis -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;aequator_diei_ac_noctis">
+        <rdf:type rdf:resource="&untitled-ontology-3;Aequator_diei_ac_noctis"/>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;aequinoctialis_circulus"/>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;cingulus_primi_motus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#aequidialis -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;aequidialis">
+        <rdf:type rdf:resource="&untitled-ontology-3;Aequidialis"/>
+        <untitled-ontology-3:Other_Denomination rdf:resource="&untitled-ontology-3;aequinoctialis_circulus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#aequinoctialis_circulus -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;aequinoctialis_circulus">
+        <rdf:type rdf:resource="&untitled-ontology-3;Circulus_Aequinoctialis"/>
+        <untitled-ontology-3:Definition>Et inter maximos primo loco explicat Æquinoctialem circulum, quoniam cognitio eius facilior eſt, &amp; reliqui fere omnes per ipſum explicari ſolent. Eſt quoque circulus Aequinoctialis omnium nobiliſſimus, 
+cum ſit menſura, ut mox dicetur, motus nobiliſſimi, nem pe primi mobilis; Mouetur enim motu maxime æquabili: Vnde ita ſeſe habet hic circulus cum alijs circulis cœleſtibus comparatus, quemadmodum primum mobile collatum cum alijs orbibus cœleſtibus. Quamobrem Philoſophi primum motorẽ, 
+ideſt, Deum Opt. Max. in circulo Aequinoctiali, tamquam in ſede propria collocabant.
+Definit igitur circulum Ae quinoctinoctialem dicens, eũ circulũ in ſphæra materiali appellari Aequinoctialem, qui ſphæram in duas partes æquales diuidit, æqualiterq́ue ab utroque polo ſecundum omnem ſui partem diſtat. Atque hic eadem ratione in cœlo erit concipiendus collocari in medio inter 
+duos mundi polos. (Comm. De Sphaera, Cap. 2)</untitled-ontology-3:Definition>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;aequator_diei_ac_noctis"/>
+        <untitled-ontology-3:Other_Denomination rdf:resource="&untitled-ontology-3;aequidialis"/>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;cingulus_primi_motus"/>
+        <untitled-ontology-3:Hyponymy rdf:resource="&untitled-ontology-3;maior_circulus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#aster -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;aster">
+        <rdf:type rdf:resource="&untitled-ontology-3;Aster"/>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;stella"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#aster_erraticum -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;aster_erraticum">
+        <rdf:type rdf:resource="&untitled-ontology-3;Aster_Erraticum"/>
+        <untitled-ontology-3:Definition>Postremo reliquæ ſeptem ſphæræ, quarum ſingulæ ſingulas continent ſtellas, planetarum ſtellæ uocantur, quoniam deferunt ſtellas, ſiue aſtra, qui planetæ ſunt dicti, id eſt, aſtra erratica, ſeu Errones, non quòd ita in cœlo oberrent, ut non ordinato, certo, &amp; determinato motu uehantur: Hac enim 
+ratione non poſſet de illis haberi ſcientia, quod uerum non eſt, cum habeãt certas motuũ periodos: Sed ob id aſtra erratica uocantur, quod neque ipſa inter ſe eandem ſemper habeant diſtantiam, neq. cum ſtellis fixis octaui orbis eundem ſeruent ordinem. (Comm. De Sphaera, Cap. 1).</untitled-ontology-3:Definition>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;planeta"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#cingulus_primi_motus -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;cingulus_primi_motus">
+        <rdf:type rdf:resource="&untitled-ontology-3;Cingulus_Primi_Motus"/>
+        <untitled-ontology-3:Definition>Dicitur ergo cingulus primi motus, quia cingit, ſiue diuidit primum mobile, ſcilicet ſphæram nonam, in duo æqualia, æquidiſtans a polis mundi. (Comm. De Sphaera, Cap.2).</untitled-ontology-3:Definition>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;aequator_diei_ac_noctis"/>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;aequinoctialis_circulus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#circle_of_latitudes -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;circle_of_latitudes">
+        <rdf:type rdf:resource="&untitled-ontology-3;CIRCLE_OF_LATITUDES"/>
+        <untitled-ontology-3:isDenotedBy rdf:resource="&untitled-ontology-3;circulus_latitudinum"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#circulus_aequidistans -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;circulus_aequidistans">
+        <rdf:type rdf:resource="&untitled-ontology-3;Circulus_Aequidistans"/>
+        <untitled-ontology-3:Definition>Æquidiſtantes circulos appellat eos, quorum poli ijdem ſunt, qui poli mundi; cuiuſmodi ſunt quinque circuli in ſphæra, nimirũ Æequator, tropicus Capricorni , tropicus Cancri, circulus arcticus, &amp; circulus antarcticus: Hi enim circuli æquidiſtantes ſunt inter ſe, ut conſtat ex propoſ. a. lib. 2. Theodoſij.  (Comm. De Spahera, Cap. 2).</untitled-ontology-3:Definition>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;circulus_parallelus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#circulus_aequinoctii -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;circulus_aequinoctii">
+        <rdf:type rdf:resource="&untitled-ontology-3;Circulus_Aequinoctii"/>
+        <untitled-ontology-3:Author>al-Farghānī</untitled-ontology-3:Author>
+        <untitled-ontology-3:Other_Denomination rdf:resource="&untitled-ontology-3;aequidialis"/>
+        <untitled-ontology-3:Other_Denomination rdf:resource="&untitled-ontology-3;aequinoctialis_circulus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#circulus_altitudinum -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;circulus_altitudinum">
+        <rdf:type rdf:resource="&untitled-ontology-3;Circulus_Altitudinum"/>
+        <untitled-ontology-3:Definition>Vt Horizon habet circulos parallelos circa verticem capitis deſcriptos, qui dici ſolent circuli altitudinum.  (Comm. De Sphaera, Cap. 2).</untitled-ontology-3:Definition>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#circulus_antarcticus -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;circulus_antarcticus">
+        <rdf:type rdf:resource="&untitled-ontology-3;Circulus_Antarcticus"/>
+        <untitled-ontology-3:Hyponymy rdf:resource="&untitled-ontology-3;minor_circulus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#circulus_arcticus -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;circulus_arcticus">
+        <rdf:type rdf:resource="&untitled-ontology-3;Circulus_Arcticus"/>
+        <untitled-ontology-3:Hyponymy rdf:resource="&untitled-ontology-3;minor_circulus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#circulus_declinationis -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;circulus_declinationis">
+        <rdf:type rdf:resource="&untitled-ontology-3;Circulus_Declinationis"/>
+        <untitled-ontology-3:Definition>Circvli declinationum, qui per polos mundi, &amp; ſingula Æquatoris puncta educuntur. (Comm. De Sphaera, Cap. 2).</untitled-ontology-3:Definition>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#circulus_domorum_celestium -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;circulus_domorum_celestium">
+        <rdf:type rdf:resource="&untitled-ontology-3;Circulus_Domorum_Celestium"/>
+        <untitled-ontology-3:Definition>Circvli domomorum cœleftium, qui totum cęlum in 12. partes ſecant, quæ domus cęleſtes di-
+cuntur. (Comm. De Spaera, Cap. 2).</untitled-ontology-3:Definition>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#circulus_extrinsecus -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;circulus_extrinsecus">
+        <rdf:type rdf:resource="&untitled-ontology-3;Circulus_Extrinsecus"/>
+        <untitled-ontology-3:Definition>Hi enim duo [Meridianus, &amp; Horizon] extrinſeci dicuntur, quia ita in cœlo concipiendi ſunt, ut ſemper firmum ſitum obtineant, &amp; nulla ratione ad motum cœli circumuoluantur, ſed ſemper in eodem loco permaneant. Qua de cauſa à pleriſque immobiles dicti fuere. (Comm. De Spahera, Cap.2).</untitled-ontology-3:Definition>
+        <untitled-ontology-3:denotes rdf:resource="&untitled-ontology-3;extrinsic_circle"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#circulus_intrinsecus -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;circulus_intrinsecus">
+        <rdf:type rdf:resource="&untitled-ontology-3;Circulus_Intrinsecus"/>
+        <untitled-ontology-3:Definition>Intrinſeci ſunt, qui in cęlo fixi omnino concipiuntur, ita ut uná cum eo circumducantur. Inde a quibuſdam mobiles nominantur, quales ſunt omnes circuli primarij ſphæræ, excepto Meridiano, &amp; Horizonte. (Comm. De Sphaera, Cap. 2)</untitled-ontology-3:Definition>
+        <untitled-ontology-3:denotes rdf:resource="&untitled-ontology-3;intrinsic_circle"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#circulus_latitudinum -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;circulus_latitudinum">
+        <rdf:type rdf:resource="&untitled-ontology-3;Circulus_Latitudinum"/>
+        <untitled-ontology-3:Definition>Circvli latitudinum, qui per polos Zodiaci, &amp; ſingula Eclipticæ puncta deſcribuntur. (Comm. De Sphaera, Cap. 2).</untitled-ontology-3:Definition>
+        <untitled-ontology-3:denotes rdf:resource="&untitled-ontology-3;circle_of_latitudes"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#circulus_maximus -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;circulus_maximus">
+        <rdf:type rdf:resource="&untitled-ontology-3;Circulus_Maximus"/>
+        <untitled-ontology-3:Definition>Dicvntvr in ſphæra illi circuli, qui idem cum ſphæra centrum poſſident, maximi, ſiue maiores, quia, ut demonſtrat Theodoſius lib. 1. propoſ. 6. circuli, qui per ſphæræ centrum dncuntur, ſunt omnium maximi, ita ut maior illis dari non poſſit: quemadmodum etiam linea, quæ in circulo aliquo per cẽtrum ducitur, nempe diameter, eſt omnium maxima. (Comm. De Sphaera, Cap. 2).</untitled-ontology-3:Definition>
+        <untitled-ontology-3:denotes rdf:resource="&untitled-ontology-3;maior_circle"/>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;maior_circulus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#circulus_non_maximus -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;circulus_non_maximus">
+        <rdf:type rdf:resource="&untitled-ontology-3;Circulus_Non_maximus"/>
+        <untitled-ontology-3:Definition>Illi autem circuli, quorum centrum diuerſum eſt à centro ſphæræ, appellantur non maximi, ſiue mi 
+nores, quoniam, ut Theodoſius demonſtrat loco citato, circuli, qui non per  centrum ſphæræ ducuntur, minores exiſtunt ijs, qui per centrum ſphæræ tranſeunt, &amp; quo remotiores à centro ſphæræ fuerint, eo etiã minores efficiuntur. (Comm. De Spahera, Cap. 2).</untitled-ontology-3:Definition>
+        <untitled-ontology-3:denotes rdf:resource="&untitled-ontology-3;minor_circle"/>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;minor_circulus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#circulus_obliquus -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;circulus_obliquus">
+        <rdf:type rdf:resource="&untitled-ontology-3;Circulus_Obliquus"/>
+        <untitled-ontology-3:Definition>Obliquos cireulos uocat eos, qui circulos parallelos, quos ſecãt, ad angulos inæquales, &amp; obliquos ſecant: quales ſunt apud ipſum Zodiacus, &amp; circulus lacteus, quibus adiungendus eſt Horizon quicunque obliquus.</untitled-ontology-3:Definition>
+        <untitled-ontology-3:denotes rdf:resource="&untitled-ontology-3;oblique_circle"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#circulus_parallelus -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;circulus_parallelus">
+        <rdf:type rdf:resource="&untitled-ontology-3;Circulus_Parallelus"/>
+        <untitled-ontology-3:Definition>Nam quilibet maximus habet ſuos parallelos: Vt Horizon habet circulos parallelos circa verticem capitis deſcriptos, qui dici ſolent circuli altitudinum. Aequator habet parallelos circulos circa polos mũdi deſcriptos, cuiuſmodi ſunt illi circuli, quos ſingulæ ſtellæ, &amp; planetæ, ſiue puncta cęli quælibet, ad motum diurnum deſeribunt quotidie. Zodiacus habet quoq; ſuos parallelos circa polos Zodiaci deſcriptos, quales ſunt ij, quos fingulæ ftellæ &amp; planetæ, ſeu quælibet puncta cęli, ad motum pro 
+prium nonæ Sphæræ ab occidente in orientem conficiunt. Idemq́ue dicẽdum eſt de alijs circulis maximis. (Comm. De Sphaera, Cap. 2).
+
+Appellant enim circulos parallelos eos, quos ſtellæ, &amp; ſingula cæli puncta ad motum diurnum deſcribũt, quorum omnium maximus eſt, ut conſtat, Aequator. (Comm. De Sphaera, Cap. 2).</untitled-ontology-3:Definition>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;circulus_aequidistans"/>
+        <untitled-ontology-3:denotes rdf:resource="&untitled-ontology-3;parallel_circle"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#circulus_per_polos_mundi_ductus -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;circulus_per_polos_mundi_ductus">
+        <rdf:type rdf:resource="&untitled-ontology-3;Circulus_per_polos_mundi_ductus"/>
+        <untitled-ontology-3:Definition>Illos denique per polos mundi duci ait, qui parallelos circulos, ſeu ęquidiſtantes ad angulos rectos, ac bifariam diuidunt; qui numero ſunt cres, Colurus ſolſtitiorum, Colurus æquinoctiorum, &amp; Meridianus, quibus adiungi poteſt Horizon rectus. (Comm. De Sphaera, Cap.2).</untitled-ontology-3:Definition>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#circulus_positionum -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;circulus_positionum">
+        <rdf:type rdf:resource="&untitled-ontology-3;Circulus_positionum"/>
+        <untitled-ontology-3:Definition>Circvli poſitionnm, qui per communes ſectiones Horizontis, &amp; Meridiani, necnon per centrum cuiuſque ſtellæ tranſire definiuntur. (Comm. DE Spaera, Cap. 2).</untitled-ontology-3:Definition>
+        <untitled-ontology-3:denotes rdf:resource="&untitled-ontology-3;position_circle"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#circulus_primarius -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;circulus_primarius">
+        <rdf:type rdf:resource="&untitled-ontology-3;Circulus_Primarius"/>
+        <untitled-ontology-3:Definition>Nunc uero in hoc ſecundo cap. explicat decem illos circulos primarios, ex quibus ſphæra materialis componitur, &amp; cœleſtis ſphæra, cuius gratia hæc inſtituitur, componi intelligitur; quoniam uidelicet ſine his nullo modo cauſæ reddi poſſunt apparentiarum cœleſtium, cuiuſmodi ſunt aſcenſiones, &amp; deſcenſiones ſignorum, ortus, &amp; occaſus ſiderum, diuerſitas dierum, ac noctium in diuerſis regionibus &amp; c. (Comm. De Sphaera, Cap. 2).</untitled-ontology-3:Definition>
+        <untitled-ontology-3:Hyperonymy rdf:resource="&untitled-ontology-3;maior_circulus"/>
+        <untitled-ontology-3:Hyperonymy rdf:resource="&untitled-ontology-3;minor_circulus"/>
+        <untitled-ontology-3:denotes rdf:resource="&untitled-ontology-3;primary_circle"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#circulus_sphaerae -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;circulus_sphaerae">
+        <rdf:type rdf:resource="&untitled-ontology-3;Circulus_sphaerae"/>
+        <untitled-ontology-3:Definition>Circvli ſphæræ ſunt 10. quorum hæc ſunt nomina. Aequinoctialis, Zodiacus, Colurus ſolſtitiorum, Colurus æquinoctiorum, Meridianus, Horizon, Tropicus Cancri, Tropicus Capricorni, 
+Circulus arcticus, &amp; circulus antarcticus. Priores ſex, maiores dicuntur, ſiue maximi, poſteriores quatuor, minores, ſiue non maximi.</untitled-ontology-3:Definition>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#colurus_solstitiorum -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;colurus_solstitiorum">
+        <rdf:type rdf:resource="&untitled-ontology-3;Colurus_Solstitiorum"/>
+        <untitled-ontology-3:Hyponymy rdf:resource="&untitled-ontology-3;maior_circulus"/>
+        <untitled-ontology-3:denotes rdf:resource="&untitled-ontology-3;solstitial_colure"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#colurus_æquinoctiorum -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;colurus_æquinoctiorum">
+        <rdf:type rdf:resource="&untitled-ontology-3;Colurus_æquinoctiorum"/>
+        <untitled-ontology-3:denotes rdf:resource="&untitled-ontology-3;equinoctial_colure"/>
+        <untitled-ontology-3:Hyponymy rdf:resource="&untitled-ontology-3;maior_circulus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#equinoctial_colure -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;equinoctial_colure">
+        <rdf:type rdf:resource="&untitled-ontology-3;EQUINOCTIAL_COLURE"/>
+        <untitled-ontology-3:isDenotedBy rdf:resource="&untitled-ontology-3;colurus_æquinoctiorum"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#errones -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;errones">
+        <rdf:type rdf:resource="&untitled-ontology-3;Errones"/>
+        <untitled-ontology-3:Definition>Postremo reliquæ ſeptem ſphæræ, quarum ſingulæ ſingulas continent ſtellas, planetarum ſtellæ uocantur, quoniam deferunt ſtellas, ſiue aſtra, qui planetæ ſunt dicti, id eſt, aſtra erratica, ſeu Errones, non quòd ita in cœlo oberrent, ut non ordinato, certo, &amp; determinato motu uehantur: Hac enim 
+ratione non poſſet de illis haberi ſcientia, quod uerum non eſt, cum habeãt certas motuũ periodos: Sed ob id aſtra erratica uocantur, quod neque ipſa inter ſe eandem ſemper habeant diſtantiam, neq. cum ſtellis fixis octaui orbis eundem ſeruent ordinem. [...] Hanc igitur ob cauſam ita ſtellæ in cælo oberrare ui 
+dentur, ut caſu quodam, ac fato agi iudicentur. Quapropter ab Aſtronomis Planetæ meritò nuncupantur. Comm. De Sphaera, Cap. 1).</untitled-ontology-3:Definition>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;aster_erraticum"/>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;planeta"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#extrinsic_circle -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;extrinsic_circle">
+        <rdf:type rdf:resource="&untitled-ontology-3;EXTRINSIC_CIRCLE"/>
+        <untitled-ontology-3:isDenotedBy rdf:resource="&untitled-ontology-3;circulus_extrinsecus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#firmamentum -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;firmamentum">
+        <rdf:type rdf:resource="&untitled-ontology-3;Firmamentum"/>
+        <untitled-ontology-3:Definition>Diuidit itaque auctor ſphæram ita acceptam in 9. ſphæras nempe in ſphæram nonam, quę primus motus, ſiue primum mobile dicitur: &amp; in ſphæram ſtellarum fixarum, quæ Firmamentum nuncupatur, &amp; in ſeptem ſphæras ſeptem planetarum [...] 
+Appellat quoque auctor cum Aſtronomis ſphæram, quæ eſt octaua quo ad nos, Firmamentum, &amp; ſphæram ſtellarum fixarum. Firmamentum quidem, quia ſicut munimẽtum, vallum, aut mœnia in extremis partibus poſita cingunt, muniunt, ac firmant ciuitatem, ſic etiam octaua ſphæra, quæ Fir-
+mamentum nuncupatur, &amp; quam antiquitas omnis ſupremum, ac extremum coelum putauit, ſirmat, continet, ambit; &amp; quaſi munit non ſolum reliquas ſphæras inferiores omnes, verum etiam omnia, quæcunque in mundo uniuerſo exiſtunt: Vel etiam dicitur Firmamentum, quoniam uidelicet continet ſtellas firmius hærentes, ut mox dicetur. At uero ſphæram ſtellarum ſixarum nominat, quia defert, circumuehit, &amp; continet omnes ſtellas fixas.  (Comm. De Sphaera, Cap. 1).</untitled-ontology-3:Definition>
+        <untitled-ontology-3:denotes rdf:resource="&untitled-ontology-3;heavens"/>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;sphaera_stellarum_fixarum"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#fixed_star -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;fixed_star">
+        <rdf:type rdf:resource="&untitled-ontology-3;FIXED_STAR"/>
+        <untitled-ontology-3:contains rdf:resource="&untitled-ontology-3;fixed_star"/>
+        <untitled-ontology-3:isDenotedBy rdf:resource="&untitled-ontology-3;stella_fixa"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#heavens -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;heavens">
+        <rdf:type rdf:resource="&untitled-ontology-3;HEAVENS"/>
+        <untitled-ontology-3:isDenotedBy rdf:resource="&untitled-ontology-3;firmamentum"/>
+        <untitled-ontology-3:isDenotedBy rdf:resource="&untitled-ontology-3;octava_sphaera"/>
+        <untitled-ontology-3:isDenotedBy rdf:resource="&untitled-ontology-3;sphaera_stellarum_fixarum"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#horarius_circulus -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;horarius_circulus">
+        <rdf:type rdf:resource="&untitled-ontology-3;Horarius_Circulus"/>
+        <untitled-ontology-3:Definition>Horarii [scil. circuli], qui totum cęlum in 24. horas ſecant, atque hi ſunt in triplici differentia. Aut enim diſtribuunt cęlum in 24. horas æquales, initio facto à meridie, quo pacto incedunt per polos mundi: Aut in 24. horas æquales, incipiendo ab ortu, uel occaſu Solis, qua ratione contingunt duos circulos parallelos, quorũ unus eſt maximus ſemper apparentium, alter uero maximus ſemper occultorum; Aut deniq; in 24. horas inæquales, quando nimirum neque per mundi polos incedũt, neque dictos parallelos contingunt, ſed diuidunt omnia ſegmenta parallelorum ſupra Horizontem, itemq́; infra Horizontem exiſtentia, in 12. partes æquales. (Comm. De Spaera, Cap. 2).</untitled-ontology-3:Definition>
+        <untitled-ontology-3:denotes rdf:resource="&untitled-ontology-3;hour_circle"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#horizon -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;horizon">
+        <rdf:type rdf:resource="&untitled-ontology-3;Horizon"/>
+        <untitled-ontology-3:Definition>Quoniam uero ex decem ſphæræ circulis primarijs Meridianus, atque Horizon ſunt prorſus immobiles in 
+quacunque regione ita ut, etiamſi cœlum primum perpetuo, ac indeſinenter circumferatur, prędicti duo circuli nihilominus immoti omnino concipiãtur, &amp; firmi. (Comm. De Sphaera, Cap.2).</untitled-ontology-3:Definition>
+        <untitled-ontology-3:denotes rdf:resource="&untitled-ontology-3;horizon_C"/>
+        <untitled-ontology-3:Hyponymy rdf:resource="&untitled-ontology-3;maior_circulus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#horizon_C -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;horizon_C">
+        <rdf:type rdf:resource="&untitled-ontology-3;HORIZON"/>
+        <untitled-ontology-3:isDenotedBy rdf:resource="&untitled-ontology-3;horizon"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#hour_circle -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;hour_circle">
+        <rdf:type rdf:resource="&untitled-ontology-3;HOUR_CIRCLE"/>
+        <untitled-ontology-3:isDenotedBy rdf:resource="&untitled-ontology-3;horarius_circulus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#intrinsic_circle -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;intrinsic_circle">
+        <rdf:type rdf:resource="&untitled-ontology-3;INTRINSIC_CIRCLE"/>
+        <untitled-ontology-3:isDenotedBy rdf:resource="&untitled-ontology-3;circulus_intrinsecus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#maior_circle -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;maior_circle">
+        <rdf:type rdf:resource="&untitled-ontology-3;MAIOR_CIRCLE"/>
+        <untitled-ontology-3:isDenotedBy rdf:resource="&untitled-ontology-3;circulus_maximus"/>
+        <untitled-ontology-3:isDenotedBy rdf:resource="&untitled-ontology-3;maior_circulus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#maior_circulus -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;maior_circulus">
+        <rdf:type rdf:resource="&untitled-ontology-3;Maior_Circulus"/>
+        <untitled-ontology-3:Definition>Maior autem circulus in ſphæra dicitur, qui deſcriptus in ſuperficie ſphæræ ſuper eius centrum diuidit ſphæram in duo æqualia. (Comm. De Spahera, II)</untitled-ontology-3:Definition>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;circulus_maximus"/>
+        <untitled-ontology-3:Hyponymy rdf:resource="&untitled-ontology-3;circulus_primarius"/>
+        <untitled-ontology-3:Hyperonymy rdf:resource="&untitled-ontology-3;colurus_solstitiorum"/>
+        <untitled-ontology-3:Hyperonymy rdf:resource="&untitled-ontology-3;colurus_æquinoctiorum"/>
+        <untitled-ontology-3:Hyperonymy rdf:resource="&untitled-ontology-3;horizon"/>
+        <untitled-ontology-3:Hyperonymy rdf:resource="&untitled-ontology-3;meridianus"/>
+        <untitled-ontology-3:Hyperonymy rdf:resource="&untitled-ontology-3;zodiacus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#meridianus -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;meridianus">
+        <rdf:type rdf:resource="&untitled-ontology-3;Meridianus"/>
+        <untitled-ontology-3:Definition>Quoniam uero ex decem ſphæræ circulis primarijs Meridianus, atque Horizon ſunt prorſus immobiles in 
+quacunque regione ita ut, etiamſi cœlum primum perpetuo, ac indeſinenter circumferatur, prędicti duo circuli nihilominus immoti omnino concipiãtur, &amp; firmi. (Comm- De Sphaera, Cap.2).</untitled-ontology-3:Definition>
+        <untitled-ontology-3:Hyponymy rdf:resource="&untitled-ontology-3;maior_circulus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#minor_circle -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;minor_circle">
+        <rdf:type rdf:resource="&untitled-ontology-3;MINOR_CIRCLE"/>
+        <untitled-ontology-3:isDenotedBy rdf:resource="&untitled-ontology-3;circulus_non_maximus"/>
+        <untitled-ontology-3:isDenotedBy rdf:resource="&untitled-ontology-3;minor_circulus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#minor_circulus -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;minor_circulus">
+        <rdf:type rdf:resource="&untitled-ontology-3;Minor_Circulus"/>
+        <untitled-ontology-3:Definition>Minor uerò, qui deſcriptus in ſuperficie ſphęræ eam non diuidit in duo æqualia, ſed in portiones inæquales. (Comm. De spahera, Cap. 2)</untitled-ontology-3:Definition>
+        <untitled-ontology-3:Hyperonymy rdf:resource="&untitled-ontology-3;circulus_antarcticus"/>
+        <untitled-ontology-3:Hyperonymy rdf:resource="&untitled-ontology-3;circulus_arcticus"/>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;circulus_non_maximus"/>
+        <untitled-ontology-3:Hyponymy rdf:resource="&untitled-ontology-3;circulus_primarius"/>
+        <untitled-ontology-3:denotes rdf:resource="&untitled-ontology-3;minor_circle"/>
+        <untitled-ontology-3:Hyperonymy rdf:resource="&untitled-ontology-3;tropicus_cancri"/>
+        <untitled-ontology-3:Hyperonymy rdf:resource="&untitled-ontology-3;tropicus_capricorni"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#motus_Primus -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;motus_Primus">
+        <rdf:type rdf:resource="&untitled-ontology-3;Motus_Primus"/>
+        <untitled-ontology-3:Definition>Vnde ſciendum, quod primus motus, di citur motus primi mobilis, hoc eſt, nonę ſphæræ, ſiue cœli ultimi, qui eſt ab oriente per occidentem, rediens iterum in orientem: qui ctiam dicitur motus rationalis, ad ſimilitudinem motus rationis, qui eſt in microcoſmo, id eſt, in homine, ſcilicet quando fit conſider atio à creatore per creatur as in creator em, ibi ſiſtendo. (Comm. De Sphaera, Cap.2).</untitled-ontology-3:Definition>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;motus_rationalis"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#motus_irrationalis -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;motus_irrationalis">
+        <rdf:type rdf:resource="&untitled-ontology-3;Motus_Irrationalis"/>
+        <untitled-ontology-3:Definition>Secundus motus eſt firmamenti, &amp; planetarum, contrarius huic, ab occidente per orientem iterum rediens in occidentem: qui motus dicitur irrationalis, ſiue ſenſualis, ad ſimilitudinem motus microcoſmi, qui eſt à corruptibilibus ad creatorem, iterum rediens ad corruptibilia. (Com, Cap.2).m. De Sphaera</untitled-ontology-3:Definition>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#motus_rationalis -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;motus_rationalis">
+        <rdf:type rdf:resource="&untitled-ontology-3;Motus_Rationalis"/>
+        <untitled-ontology-3:Definition>Vnde ſciendum, quod primus motus, di citur motus primi mobilis, hoc eſt, nonę ſphæræ, ſiue cœli ultimi, qui eſt ab oriente per occidentem, rediens iterum in orientem: qui ctiam dicitur motus rationalis, ad ſimilitudinem motus rationis, qui eſt in microcoſmo, id eſt, in homine, ſcilicet quando fit conſider atio à creatore per creatur as in creator em, ibi ſiſtendo. (Comm. De Sphaera, Cap.2).</untitled-ontology-3:Definition>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;motus_Primus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#motus_secundus -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;motus_secundus">
+        <rdf:type rdf:resource="&untitled-ontology-3;Motus_Secundus"/>
+        <untitled-ontology-3:Definition>Secundus motus eſt firmamenti, &amp; planetarum, contrarius huic, ab occidente per orientem iterum rediens in occidentem: qui motus dicitur irrationalis, ſiue ſenſualis, ad ſimilitudinem motus microcoſmi, qui eſt à corruptibilibus ad creatorem, iterum rediens ad corruptibilia. (Comm.De Sphaera, Cap.2).</untitled-ontology-3:Definition>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#motus_sensualis -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;motus_sensualis">
+        <rdf:type rdf:resource="&untitled-ontology-3;Motus_Sensualis"/>
+        <untitled-ontology-3:Definition>Secundus motus eſt firmamenti, &amp; planetarum, contrarius huic, ab occidente per orientem iterum rediens in occidentem: qui motus dicitur irrationalis, ſiue ſenſualis, ad ſimilitudinem motus microcoſmi, qui eſt à corruptibilibus ad creatorem, iterum rediens ad corruptibilia. (Comm. De Sphaera, Cap.2).</untitled-ontology-3:Definition>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#nona_sphaera -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;nona_sphaera">
+        <rdf:type rdf:resource="&untitled-ontology-3;Nona_Sphaera"/>
+        <untitled-ontology-3:Definition>Diuidit itaque auctor ſphæram ita acceptam in 9. ſphæras nempe in ſphæram nonam, quę primus motus, ſiue primum mobile dicitur [...] 
+
+Dicitvr nona ſphæra ab auctore, &amp; alijs Aſtronomis primus motus, ſeu primum mobile, quoniam, vt ipſi putãt, nullum aliud cælum mobile ſupra ipſam exiſtit, ſuoq́. motu uelociſſimo, ut ſuo loco dicemus, omnes alias inſeriores ſphæras, quas ambit, ſecum rapit ab ortu in occaſum ſpacio vigintiquatuor horarum. Quamuis autem nonam ſphæram, quam auctor hic putat eſſe ſupremam, ac primum mobile, ſine diſcrimine poſſimus dicere &amp; primam ſphæram, &amp; nonam, ſiue ultimam; Primam quidem ordine naturę, quia proprior eſt primo enti, qua ratione ſphæra Lunæ vltima exiſtit, cum a primo ente ſit remotiſſima; Nonam uero ultimamve, quo ad nos, quia uidelicet remotior a nobis exiſtit, quo pacto Lunæ ſphæra, quoniam nobis eſt propinquior, dicetur eſſe prima: Non tamen ab Aſtronomis dici conſueuit vltimus motus, ſeu ultimum mobile, ſed ſolum primus motus, vel primum mobile, ob dignitatem, &amp; præſtantiam, quam habet circunſerendo ſphæras inferiores ſecum ſuo motu 
+proprio, qua in re primatum habere videtur. (Comm. DE Sphaera, Cap.1)</untitled-ontology-3:Definition>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;primum_mobile"/>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;primus_motus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#oblique_circle -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;oblique_circle">
+        <rdf:type rdf:resource="&untitled-ontology-3;OBLIQUE_CIRCLE"/>
+        <untitled-ontology-3:isDenotedBy rdf:resource="&untitled-ontology-3;circulus_obliquus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#octava_sphaera -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;octava_sphaera">
+        <rdf:type rdf:resource="&untitled-ontology-3;Octava_Sphaera"/>
+        <untitled-ontology-3:Definition xml:lang="elum putauit, ſirmat, continet, ambit; &amp; quaſi munit non ſolum reliquas ſphæras inferiores omnes, verum etiam omnia, quæcunque in mundo uniuerſo exiſtunt: vel etiam dicitur firmamentum, quoniam uidelicet continet ſtellas firmius hærentes, ut mox dicetur. at uero ſphæram ſtellarum ſixarum nominat, quia defert, circumuehit, &amp; continet omnes ſtellas fixas. (comm. de sphaera, cap.1).">Appellat quoque auctor cum Aſtronomis ſphæram, quæ eſt octaua quo ad nos, Firmamentum, &amp; ſphæram ſtellarum fixarum. Firmamentum quidem, quia ſicut munimẽtum, vallum, aut mœnia in extremis partibus poſita cingunt, muniunt, ac firmant ciuitatem, ſic etiam octaua ſphæra, quæ Fir-
+mamentum nuncupatur, &amp; quam antiquitas omnis ſupremum, ac extremum coelum putauit, ſirmat, continet, ambit; &amp; quaſi munit non ſolum reliquas ſphæras inferiores omnes, verum etiam omnia, quæcunque in mundo uniuerſo exiſtunt: Vel etiam dicitur Firmamentum, quoniam uidelicet continet ſtellas firmius hærentes, ut mox dicetur. At uero ſphæram ſtellarum ſixarum nominat, quia defert, circumuehit, &amp; continet omnes ſtellas fixas.  (Comm. De Sphaera, Cap. 1).</untitled-ontology-3:Definition>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;firmamentum"/>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;sphaera_stellarum_fixarum"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#orbis_coelestis -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;orbis_coelestis">
+        <rdf:type rdf:resource="&untitled-ontology-3;Orbis_Coelestis"/>
+        <untitled-ontology-3:Definition xml:lang="õtigui sũt.ſe, ita vt ſemper ſuperior inferiorem includat, nihilq́ue inter vnum atque alte  rum ſit medium, non ſecus ac in tunicis cæparum uidemus ſuperiorem vndiq. circundare inferiorem (comm. de sphaera, cap. 1).">Svnt autem omnes orbes cæleſtes contigui prorſus, &amp; immediati inter Orbes cæleſtes inter ſe 
+</untitled-ontology-3:Definition>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#orbis_æquationis_diei -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;orbis_æquationis_diei">
+        <rdf:type rdf:resource="&untitled-ontology-3;Orbis_æquationis_diei"/>
+        <untitled-ontology-3:Author>Ptolemy</untitled-ontology-3:Author>
+        <untitled-ontology-3:Other_Denomination rdf:resource="&untitled-ontology-3;aequidialis"/>
+        <untitled-ontology-3:Other_Denomination rdf:resource="&untitled-ontology-3;aequinoctialis_circulus"/>
+        <untitled-ontology-3:Other_Denomination rdf:resource="&untitled-ontology-3;circulus_aequinoctii"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#parallel_circle -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;parallel_circle">
+        <rdf:type rdf:resource="&untitled-ontology-3;PARALLEL_CIRCLE"/>
+        <untitled-ontology-3:isDenotedBy rdf:resource="&untitled-ontology-3;circulus_parallelus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#planeta -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;planeta">
+        <rdf:type rdf:resource="&untitled-ontology-3;Planeta"/>
+        <untitled-ontology-3:Definition>Postremo reliquæ ſeptem ſphæræ, quarum ſingulæ ſingulas continent ſtellas, planetarum ſtellæ uocantur, quoniam deferunt ſtellas, ſiue aſtra, qui planetæ ſunt dicti, id eſt, aſtra erratica, ſeu Errones, non quòd ita in cœlo oberrent, ut non ordinato, certo, &amp; determinato motu uehantur: Hac enim 
+ratione non poſſet de illis haberi ſcientia, quod uerum non eſt, cum habeãt certas motuũ periodos: Sed ob id aſtra erratica uocantur, quod neque ipſa inter ſe eandem ſemper habeant diſtantiam, neq. cum ſtellis fixis octaui orbis eundem ſeruent ordinem. (Comm. De Sphaera, Cap. 1).</untitled-ontology-3:Definition>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;aster_erraticum"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#polus_antarcticus -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;polus_antarcticus">
+        <rdf:type rdf:resource="&untitled-ontology-3;Polus_Antarcticus"/>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;polus_australis"/>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;polus_meridionalis"/>
+        <untitled-ontology-3:Hyponymy rdf:resource="&untitled-ontology-3;polus_mundi"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#polus_arcticus -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;polus_arcticus">
+        <rdf:type rdf:resource="&untitled-ontology-3;Polus_Arcticus"/>
+        <untitled-ontology-3:Definition>VNDE notandum, quòd polus mundi, qui nobis ſemper apparet, dicitur polus ſeptentrionalis, arcticus, uel borealis. Arcticus quidem dicitur ab ἄρκτος, quod eſt urſa. Eſt enim iuxta maiorem urſam. (Comm. De Sphaera, Cap. 2).</untitled-ontology-3:Definition>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;polus_borealis"/>
+        <untitled-ontology-3:Hyponymy rdf:resource="&untitled-ontology-3;polus_mundi"/>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;polus_septentrionalis"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#polus_australis -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;polus_australis">
+        <rdf:type rdf:resource="&untitled-ontology-3;Polus_Australis"/>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;polus_antarcticus"/>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;polus_meridionalis"/>
+        <untitled-ontology-3:Hyponymy rdf:resource="&untitled-ontology-3;polus_mundi"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#polus_borealis -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;polus_borealis">
+        <rdf:type rdf:resource="&untitled-ontology-3;Polus_Borealis"/>
+        <untitled-ontology-3:Definition>VNDE notandum, quòd polus mundi, qui nobis ſemper apparet, dicitur polus ſeptentrionalis, arcticus, uel borealis. [...] Borealis uero dicitur, quia eſt in illa parte, à qua uenit Boreas.  (Comm. De Sphaera, Cap. 2).</untitled-ontology-3:Definition>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;polus_arcticus"/>
+        <untitled-ontology-3:Hyponymy rdf:resource="&untitled-ontology-3;polus_mundi"/>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;polus_septentrionalis"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#polus_meridionalis -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;polus_meridionalis">
+        <rdf:type rdf:resource="&untitled-ontology-3;Polus_Meridionalis"/>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;polus_antarcticus"/>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;polus_australis"/>
+        <untitled-ontology-3:Hyponymy rdf:resource="&untitled-ontology-3;polus_mundi"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#polus_mundi -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;polus_mundi">
+        <rdf:type rdf:resource="&untitled-ontology-3;Polus_Mundi"/>
+        <untitled-ontology-3:Definition>Iſta duo puncta in Firmamento ſtabilia, dicuntur poli mundi. (Comm. De Sphaera, Cap. 2).</untitled-ontology-3:Definition>
+        <untitled-ontology-3:Hyperonymy rdf:resource="&untitled-ontology-3;polus_antarcticus"/>
+        <untitled-ontology-3:Hyperonymy rdf:resource="&untitled-ontology-3;polus_arcticus"/>
+        <untitled-ontology-3:Hyperonymy rdf:resource="&untitled-ontology-3;polus_australis"/>
+        <untitled-ontology-3:Hyperonymy rdf:resource="&untitled-ontology-3;polus_borealis"/>
+        <untitled-ontology-3:Hyperonymy rdf:resource="&untitled-ontology-3;polus_meridionalis"/>
+        <untitled-ontology-3:Hyperonymy rdf:resource="&untitled-ontology-3;polus_septentrionalis"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#polus_septentrionalis -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;polus_septentrionalis">
+        <rdf:type rdf:resource="&untitled-ontology-3;Polus_Septentrionalis"/>
+        <untitled-ontology-3:Definition>VNDE notandum, quòd polus mundi, qui nobis ſemper apparet, dicitur polus ſeptentrionalis, arcticus, uel borealis. Septentrionalis dicitur à ſeptentrione, hoc eſt, à minori urſa, quæ dicitur à ſeptem, &amp; trion, quod eſt bos; quia ſeptem ſtellæ, quæ ſunt in vrſa, tarde mouentur ad modum bouis, cum ſint propinquę polo. (Comm. De Sphaera, Cap. 2).</untitled-ontology-3:Definition>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;polus_arcticus"/>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;polus_borealis"/>
+        <untitled-ontology-3:Hyponymy rdf:resource="&untitled-ontology-3;polus_mundi"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#position_circle -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;position_circle">
+        <rdf:type rdf:resource="&untitled-ontology-3;POSITION_CIRCLE"/>
+        <untitled-ontology-3:isDenotedBy rdf:resource="&untitled-ontology-3;circulus_positionum"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#prima_sphaera -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;prima_sphaera">
+        <rdf:type rdf:resource="&untitled-ontology-3;Prima_Sphaera"/>
+        <untitled-ontology-3:Definition>Nonam uero ultimamve, quo ad nos, quia uidelicet remotior a nobis exiſtit, quo pacto Lunæ ſphæra, quoniam nobis eſt propinquior, dicetur eſſe prima. (Comm. De Sphaera, Cap.1).</untitled-ontology-3:Definition>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;sphaera_Lunae"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#primary_circle -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;primary_circle">
+        <rdf:type rdf:resource="&untitled-ontology-3;PRIMARY_CIRCLE"/>
+        <untitled-ontology-3:isDenotedBy rdf:resource="&untitled-ontology-3;circulus_primarius"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#primum_mobile -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;primum_mobile">
+        <rdf:type rdf:resource="&untitled-ontology-3;Primum_Mobile"/>
+        <untitled-ontology-3:Definition>Diuidit itaque auctor ſphæram ita acceptam in 9. ſphæras nempe in ſphæram nonam, quę primus motus, ſiue primum mobile dicitur [...] (Comm. De Sphaera, Cap. 1).</untitled-ontology-3:Definition>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;nona_sphaera"/>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;primus_motus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#primus_motus -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;primus_motus">
+        <rdf:type rdf:resource="&untitled-ontology-3;Primus_Motus"/>
+        <untitled-ontology-3:Definition>Diuidit itaque auctor ſphæram ita acceptam in 9. ſphæras nempe in ſphæram nonam, quę primus motus, ſiue primum mobile dicitur [...] (Comm. De Sphaera, Cap. 1).</untitled-ontology-3:Definition>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;nona_sphaera"/>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;primum_mobile"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#solstitial_colure -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;solstitial_colure">
+        <rdf:type rdf:resource="&untitled-ontology-3;SOLSTITIAL_COLURE"/>
+        <untitled-ontology-3:isDenotedBy rdf:resource="&untitled-ontology-3;colurus_solstitiorum"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#sphaera_Iovis -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;sphaera_Iovis">
+        <rdf:type rdf:resource="&untitled-ontology-3;Sphaera_Iovis"/>
+        <untitled-ontology-3:Definition>Diuidit itaque auctor ſphæram ita acceptam in 9. ſphæras nempe in ſphæram nonam, quę primus motus, ſiue primum mobile dicitur: &amp; in ſphæram ſtellarum fixarum, quæ Firmamentum nuncupatur, &amp; in ſeptem ſphæras ſeptem planetarum, videlicet in ſphærã Saturni, louis, Martis, Solis, Veneris, Mercurij, &amp; Lunæ. Hanc tamen diuiſionem paulo poſt examinabimus, quoniam Aſtronomi recentiores plures ſphæras cæleſtes conſtituunt. (Comm. De Sphaera, Cap. 1).</untitled-ontology-3:Definition>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#sphaera_Lunae -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;sphaera_Lunae">
+        <rdf:type rdf:resource="&untitled-ontology-3;Sphaera_Lunae"/>
+        <untitled-ontology-3:Definition>Diuidit itaque auctor ſphæram ita acceptam in 9. ſphæras nempe in ſphæram nonam, quę primus motus, ſiue primum mobile dicitur: &amp; in ſphæram ſtellarum fixarum, quæ Firmamentum nuncupatur, &amp; in ſeptem ſphæras ſeptem planetarum, videlicet in ſphærã Saturni, louis, Martis, Solis, Veneris, Mercurij, &amp; Lunæ. Hanc tamen diuiſionem paulo poſt examinabimus, quoniam Aſtronomi recentiores plures ſphæras cæleſtes conſtituunt. (Comm. De Sphaera, Cap. 1).</untitled-ontology-3:Definition>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;prima_sphaera"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#sphaera_Martis -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;sphaera_Martis">
+        <rdf:type rdf:resource="&untitled-ontology-3;Sphaera_Martis"/>
+        <untitled-ontology-3:Definition>Diuidit itaque auctor ſphæram ita acceptam in 9. ſphæras nempe in ſphæram nonam, quę primus motus, ſiue primum mobile dicitur: &amp; in ſphæram ſtellarum fixarum, quæ Firmamentum nuncupatur, &amp; in ſeptem ſphæras ſeptem planetarum, videlicet in ſphærã Saturni, louis, Martis, Solis, Veneris, Mercurij, &amp; Lunæ. Hanc tamen diuiſionem paulo poſt examinabimus, quoniam Aſtronomi recentiores plures ſphæras cæleſtes conſtituunt. (Comm. De Sphaera, Cap. 1).</untitled-ontology-3:Definition>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#sphaera_Mercurii -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;sphaera_Mercurii">
+        <rdf:type rdf:resource="&untitled-ontology-3;Sphaera_Mercurii"/>
+        <untitled-ontology-3:Definition>Diuidit itaque auctor ſphæram ita acceptam in 9. ſphæras nempe in ſphæram nonam, quę primus motus, ſiue primum mobile dicitur: &amp; in ſphæram ſtellarum fixarum, quæ Firmamentum nuncupatur, &amp; in ſeptem ſphæras ſeptem planetarum, videlicet in ſphærã Saturni, louis, Martis, Solis, Veneris, Mercurij, &amp; Lunæ. Hanc tamen diuiſionem paulo poſt examinabimus, quoniam Aſtronomi recentiores plures ſphæras cæleſtes conſtituunt. (Comm. De Sphaera, Cap. 1).</untitled-ontology-3:Definition>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#sphaera_Saturni -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;sphaera_Saturni">
+        <rdf:type rdf:resource="&untitled-ontology-3;Sphaera_Saturni"/>
+        <untitled-ontology-3:Definition>Diuidit itaque auctor ſphæram ita acceptam in 9. ſphæras nempe in ſphæram nonam, quę primus motus, ſiue primum mobile dicitur: &amp; in ſphæram ſtellarum fixarum, quæ Firmamentum nuncupatur, &amp; in ſeptem ſphæras ſeptem planetarum, videlicet in ſphærã Saturni, louis, Martis, Solis, Veneris, Mercurij, &amp; Lunæ. Hanc tamen diuiſionem paulo poſt examinabimus, quoniam Aſtronomi recentiores plures ſphæras cæleſtes conſtituunt. (Comm. De Sphaera, Cap. 1).</untitled-ontology-3:Definition>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#sphaera_Solis -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;sphaera_Solis">
+        <rdf:type rdf:resource="&untitled-ontology-3;Sphaera_Solis"/>
+        <untitled-ontology-3:Definition>Diuidit itaque auctor ſphæram ita acceptam in 9. ſphæras nempe in ſphæram nonam, quę primus motus, ſiue primum mobile dicitur: &amp; in ſphæram ſtellarum fixarum, quæ Firmamentum nuncupatur, &amp; in ſeptem ſphæras ſeptem planetarum, videlicet in ſphærã Saturni, louis, Martis, Solis, Veneris, Mercurij, &amp; Lunæ. Hanc tamen diuiſionem paulo poſt examinabimus, quoniam Aſtronomi recentiores plures ſphæras cæleſtes conſtituunt. (Comm. De Sphaera, Cap. 1).</untitled-ontology-3:Definition>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#sphaera_Veneris -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;sphaera_Veneris">
+        <rdf:type rdf:resource="&untitled-ontology-3;Sphaera_Veneris"/>
+        <untitled-ontology-3:Definition>Diuidit itaque auctor ſphæram ita acceptam in 9. ſphæras nempe in ſphæram nonam, quę primus motus, ſiue primum mobile dicitur: &amp; in ſphæram ſtellarum fixarum, quæ Firmamentum nuncupatur, &amp; in ſeptem ſphæras ſeptem planetarum, videlicet in ſphærã Saturni, louis, Martis, Solis, Veneris, Mercurij, &amp; Lunæ. Hanc tamen diuiſionem paulo poſt examinabimus, quoniam Aſtronomi recentiores plures ſphæras cæleſtes conſtituunt. (Comm. De Sphaera, Cap. 1).</untitled-ontology-3:Definition>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#sphaera_materialis -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;sphaera_materialis">
+        <rdf:type rdf:resource="&untitled-ontology-3;Sphaera_Materialis"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#sphaera_mundi -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;sphaera_mundi">
+        <rdf:type rdf:resource="&untitled-ontology-3;Sphaera_Mundi"/>
+        <untitled-ontology-3:Definition>SPhaera autem mundi dupliciter diuiditur, ſecundum ſubſtantiam, et ſecundum accidens. Secundum ſubſtantiam, in ſphęras nouem; Scilicet, ſphæram nonam, quę primus motus, ſiue primum mobile dicitur: &amp; in ſphæram ſtellarum fixarum, quæ firmamentum nuncupatur: &amp; in ſeptem ſphæras ſeptem planetarum quarum quædam ſunt maiores, quędam minores, ſecundum quod plus accedunt 
+uel recedunt à firmamento. Vnde inter illas ſphæras ſphæra Saturni maxima, ſphæra uero Lunæ minima exiſtit. (Comm. De Sphaera, Cap.2).</untitled-ontology-3:Definition>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#sphaera_obliqua -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;sphaera_obliqua">
+        <rdf:type rdf:resource="&untitled-ontology-3;Sphaera_obliqua"/>
+        <untitled-ontology-3:Definition>Illiuero dicuntur habere ſphæram obliquam, quicunque habitant citra Aequinoctialem, uel ultra. Illis enim ſupra Horizontem alter polorum ſemper eleuatur, alter uero ſemper deprimitur: Vel quoniam illorum Horizon artificialis interſecat Aequinoctialem, &amp; interſecatur ab eodem ad angulos 
+impares, &amp; obliquos. (Comm. De Sphaera, Cap. 1).</untitled-ontology-3:Definition>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#sphaera_recta -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;sphaera_recta">
+        <rdf:type rdf:resource="&untitled-ontology-3;Sphaera_recta"/>
+        <untitled-ontology-3:Definition>Secvndvm accidens autem diuiditur in ſphæram rectam, &amp; ſphæram obliquam. Illi autem dicuntur habere ſphæram rectam, qui manent ſub Aequinoctiali, ſi aliquis ibi manere poſſit. Et dicitur eis recta, quia neuter polorum magis altero illis eleuatur. Vel quoniam eorum Horizon interſecat Aequino ctialem, &amp; interſecatur ab eodem ad angulos rectos ſphærales. (Comm. De Sphaera, Cap. 1).</untitled-ontology-3:Definition>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#sphaera_stellarum_fixarum -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;sphaera_stellarum_fixarum">
+        <rdf:type rdf:resource="&untitled-ontology-3;Sphaera_Stellarum_Fixarum"/>
+        <untitled-ontology-3:Definition>Diuidit itaque auctor ſphæram ita acceptam in 9. ſphæras nempe in ſphæram nonam, quę primus motus, ſiue primum mobile dicitur: &amp; in ſphæram ſtellarum fixarum, quæ Firmamentum nuncupatur, &amp; in ſeptem ſphæras ſeptem planetarum  [...]
+Appellat quoque auctor cum Aſtronomis ſphæram, quæ eſt octaua quo ad nos, Firmamentum, &amp; ſphæram ſtellarum fixarum. Firmamentum quidem, quia ſicut munimẽtum, vallum, aut mœnia in extremis partibus poſita cingunt, muniunt, ac firmant ciuitatem, ſic etiam octaua ſphæra, quæ Fir-
+mamentum nuncupatur, &amp; quam antiquitas omnis ſupremum, ac extremum coelum putauit, ſirmat, continet, ambit; &amp; quaſi munit non ſolum reliquas ſphæras inferiores omnes, verum etiam omnia, quæcunque in mundo uniuerſo exiſtunt: Vel etiam dicitur Firmamentum, quoniam uidelicet continet ſtellas firmius hærentes, ut mox dicetur. At uero ſphæram ſtellarum ſixarum nominat, quia defert, circumuehit, &amp; continet omnes ſtellas fixas.  (Comm. De Sphaera, Cap. 1).</untitled-ontology-3:Definition>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;firmamentum"/>
+        <untitled-ontology-3:denotes rdf:resource="&untitled-ontology-3;heavens"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#stella -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;stella">
+        <rdf:type rdf:resource="&untitled-ontology-3;Stella"/>
+        <untitled-ontology-3:Synonym rdf:resource="&untitled-ontology-3;aster"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#stella_fixa -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;stella_fixa">
+        <rdf:type rdf:resource="&untitled-ontology-3;Stella_Fixa"/>
+        <untitled-ontology-3:Definition>Quæ quidem ſtellæ non ideo fixę dicuntur, quod non moueantur, aut quod fixę prorſus permaneant. Hoc enim falſum eſt, cum experientia compertum ſit clariſſime, eas moueri, vt ſuo loco dicetur. Neque etiam fixę dicuntur, quòd non moueantur, niſi ad motum orbis, in quo ſunt: Hac enim ratione Planetę quoq. fixi dici deberent, cum ſolum ad motum orbium, in quibus exiſtunt, circunferantur, ut poſtea oſtendemus. Sed ideo appellantur fixę, quod ſemper eundem inter ſe ſitum, ordinem, atque diſtantiam ſervent, quod quidem tum antiquorum Aſtronomorum obſeruationes, puta Prolemęi, Albategnij, cæterorumq́ue, tum etiam recentiorum manife ſtiſſi me nobis declarant. (Comm. De Spahera, Cap. 1)</untitled-ontology-3:Definition>
+        <untitled-ontology-3:denotes rdf:resource="&untitled-ontology-3;fixed_star"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#tropicus_cancri -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;tropicus_cancri">
+        <rdf:type rdf:resource="&untitled-ontology-3;Tropicus_Cancri"/>
+        <untitled-ontology-3:Hyponymy rdf:resource="&untitled-ontology-3;minor_circulus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#tropicus_capricorni -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;tropicus_capricorni">
+        <rdf:type rdf:resource="&untitled-ontology-3;Tropicus_Capricorni"/>
+        <untitled-ontology-3:Hyponymy rdf:resource="&untitled-ontology-3;minor_circulus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#verticalis_ciruclus -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;verticalis_ciruclus">
+        <rdf:type rdf:resource="&untitled-ontology-3;Verticalis_Circulus"/>
+        <untitled-ontology-3:Definition>Verticales [scil. circuli], qui per uerticem cuiuſlibet loci ad ſingula Horizontis puncta deducuntur. (Comm. De Spahera, Cap. 2)</untitled-ontology-3:Definition>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#zodiacus -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;zodiacus">
+        <rdf:type rdf:resource="&untitled-ontology-3;TERM"/>
+        <untitled-ontology-3:Hyponymy rdf:resource="&untitled-ontology-3;maior_circulus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/silvia/ontologies/2015/11/untitled-ontology-3#ἀπλανὴς -->
+
+    <NamedIndividual rdf:about="&untitled-ontology-3;ἀπλανὴς">
+        <rdf:type rdf:resource="&untitled-ontology-3;ἀπλανὴς"/>
+        <untitled-ontology-3:Other_Denomination rdf:resource="&untitled-ontology-3;stella_fixa"/>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
